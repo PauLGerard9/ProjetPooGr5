@@ -10,3 +10,6 @@ int __clrcall WinMain(array<String^>^ args)
 	ProjetPooGr5::MyForm monFormulaire;//ATTENTION : ici testWin est le nom du projet. Vous devez l’adapter au nom de votre projet
 	Application::Run(% monFormulaire);
 }
+
+
+//test de vico pour voir si ça marche
