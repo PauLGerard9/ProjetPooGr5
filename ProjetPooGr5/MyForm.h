@@ -41,6 +41,9 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
 
 	private:
 		/// <summary>
@@ -61,6 +64,9 @@ namespace ProjetPooGr5 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button1
@@ -117,11 +123,43 @@ namespace ProjetPooGr5 {
 			this->label3->TabIndex = 5;
 			this->label3->Text = L"Victor est trop beau ";
 			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(156, 276);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(444, 17);
+			this->label4->TabIndex = 6;
+			this->label4->Text = L"Le ballon dégager, par modric, directement dans les pieds marocains";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(169, 308);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(431, 51);
+			this->label5->TabIndex = 7;
+			this->label5->Text = L"Oui grosse semelle de modric, oui ! Houla c\'est étonnant de sa part\r\nd\'habitude i"
+				L"l est plutôt juste dans ses interventions !\r\n\r\n";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(49, 201);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(676, 17);
+			this->label6->TabIndex = 8;
+			this->label6->Text = L"attention il y a de l\'espace pour vlasic, a l\'opposé !!!! et le retour d\'amrbahat"
+				L" qui vient dégager son équipe !";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(808, 372);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
