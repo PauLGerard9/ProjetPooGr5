@@ -12,4 +12,4 @@ int __clrcall WinMain(array<String^>^ args)
 }
 
 
-//test de vico pour voir si ça marche
+//test de vico pour voir si ça marche  marche stp
