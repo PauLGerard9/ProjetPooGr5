@@ -2,7 +2,8 @@
 #include "tools.h"
 
 
-//un autre test de fou
+//un autre test de fou7
+//test
 class CLpersonnel {
 private:
 	int id_personnel;
