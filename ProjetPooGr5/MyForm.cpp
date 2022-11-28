@@ -11,5 +11,5 @@ int __clrcall WinMain(array<String^>^ args)
 	Application::Run(% monFormulaire);
 }
 
-
+//test encore
 //test de vico pour voir si ça marche  marche 
