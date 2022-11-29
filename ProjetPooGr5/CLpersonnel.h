@@ -17,15 +17,15 @@ private:
 	string numero;
 
 public:
-	int set_id_personnel(int id_personnel);
-	int set_id_human(int id_human);
-	string set_nom(string nom);
-	string set_prenom(string prenom);
-	int set_id_superieur(int id_superieur);
-	string set_date_recrutement(string date_recrutement);
-	string set_ville(string ville);
-	string set_rue(string rue);
-	string set_numero(string numero);
+	void set_id_personnel(int id_personnel);
+	void set_id_human(int id_human);
+	void set_nom(string nom);
+	void set_prenom(string prenom);
+	void set_id_superieur(int id_superieur);
+	void set_date_recrutement(string date_recrutement);
+	void set_ville(string ville);
+	void set_rue(string rue);
+	void set_numero(string numero);
 
 	int get_id_personnel();
 	int get_id_human();
