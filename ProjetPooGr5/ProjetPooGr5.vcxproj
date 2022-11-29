@@ -122,19 +122,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="FormClients.cpp" />
+    <ClCompile Include="FormCommande.cpp" />
+    <ClCompile Include="FormPersonnel.cpp" />
+    <ClCompile Include="FormStatistiques.cpp" />
+    <ClCompile Include="FormStock.cpp" />
+    <ClCompile Include="MyFormAccueil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLpersonnel.h" />
     <ClInclude Include="CLClient.h" />
-    <ClInclude Include="MyForm.h">
+    <ClInclude Include="FormClients.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormStatistiques.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormStock.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyFormAccueil.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="tools.h" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
+    <EmbeddedResource Include="FormClients.resx">
+      <DependentUpon>FormClients.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommande.resx">
+      <DependentUpon>FormCommande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPersonnel.resx">
+      <DependentUpon>FormPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyFormAccueil.resx">
+      <DependentUpon>MyFormAccueil.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
