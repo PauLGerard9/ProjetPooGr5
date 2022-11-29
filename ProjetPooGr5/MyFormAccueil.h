@@ -111,6 +111,7 @@ namespace ProjetPooGr5 {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"personnel";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
 			// label2
 			// 
@@ -240,7 +241,12 @@ private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide(); // sert a cacher la fenetre 
+	ProjetPooGr5::MyForm FormPersonnel;
+	FormPersonnel.ShowDialog(); // affiche 
+	this->Close();
+}
 };
 }
 
-// marche ta grosse darrone

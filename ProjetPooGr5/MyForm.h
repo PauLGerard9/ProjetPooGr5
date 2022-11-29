@@ -10,12 +10,12 @@ namespace ProjetPooGr5 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de MyForm2
+	/// Description résumée de MyForm1
 	/// </summary>
-	public ref class MyForm2 : public System::Windows::Forms::Form
+	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm2(void)
+		MyForm1(void)
 		{
 			InitializeComponent();
 			//
@@ -27,13 +27,15 @@ namespace ProjetPooGr5 {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~MyForm2()
+		~MyForm1()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Button^ button1;
+	protected:
 
 	private:
 		/// <summary>
@@ -48,11 +50,28 @@ namespace ProjetPooGr5 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->components = gcnew System::ComponentModel::Container();
-			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyForm2";
-			this->Padding = System::Windows::Forms::Padding(0);
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->SuspendLayout();
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(531, 107);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 0;
+			this->button1->Text = L"button1";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
+			// MyForm1
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(1105, 371);
+			this->Controls->Add(this->button1);
+			this->Name = L"MyForm1";
+			this->Text = L"MyForm1";
+			this->ResumeLayout(false);
+
 		}
 #pragma endregion
 	};
