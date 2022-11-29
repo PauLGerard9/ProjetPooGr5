@@ -10,5 +10,6 @@ private:
     	int prix;
     	int seuil_reaprovisionnement;
     	double tva;
+
 public:
 };
