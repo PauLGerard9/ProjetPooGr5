@@ -17,6 +17,30 @@ private:
 	string numero;
 
 public:
+	int set_id_personnel(int id_personnel);
+	int set_id_human(int id_human);
+	string set_nom(string nom);
+	string set_prenom(string prenom);
+	int set_id_superieur(int id_superieur);
+	string set_date_recrutement(string date_recrutement);
+	string set_ville(string ville);
+	string set_rue(string rue);
+	string set_numero(string numero);
+
+	int get_id_personnel();
+	int get_id_human();
+	string get_nom();
+	string get_prenom();
+	int get_id_superieur();
+	string get_date_recrutement();
+	string get_ville();
+	string get_rue();
+	string get_numero();
+
+	void creer_personnel();
+	void supprimer_personnel();
+	void modifier_personnel();
+	void afficher_personnel();
 
 };
 
