@@ -50,5 +50,8 @@
     <ClInclude Include="FormClient.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="tools.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
