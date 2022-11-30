@@ -139,6 +139,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormPersonnel.resx">
+      <DependentUpon>FormPersonnel.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFormAccueil.resx">
       <DependentUpon>MyFormAccueil.h</DependentUpon>
     </EmbeddedResource>
