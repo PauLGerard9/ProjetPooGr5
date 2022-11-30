@@ -122,6 +122,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FormClient.cpp" />
     <ClCompile Include="FormPersonnel.cpp" />
     <ClCompile Include="MyFormAccueil.cpp" />
   </ItemGroup>
@@ -131,6 +132,9 @@
     <ClInclude Include="CLPaiements.h" />
     <ClInclude Include="CLpersonnel.h" />
     <ClInclude Include="CLClient.h" />
+    <ClInclude Include="FormClient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FormPersonnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
