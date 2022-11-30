@@ -242,10 +242,11 @@ private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Hide(); // sert a cacher la fenetre 
-	ProjetPooGr5::MyForm FormPersonnel;
-	FormPersonnel.ShowDialog(); // affiche 
-	this->Close();
+	//this->Hide(); // sert a cacher la fenetre 
+	//ProjetPooGr5::MyForm MyForm23;
+	//MyForm23.ShowDialog(); // affiche 
+	//this->Close();
+	
 }
 };
 }

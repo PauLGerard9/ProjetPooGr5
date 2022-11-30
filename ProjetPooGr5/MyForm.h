@@ -61,6 +61,7 @@ namespace ProjetPooGr5 {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"button1";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click);
 			// 
 			// MyForm1
 			// 
@@ -74,5 +75,7 @@ namespace ProjetPooGr5 {
 
 		}
 #pragma endregion
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }
