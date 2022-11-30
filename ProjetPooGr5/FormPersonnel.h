@@ -10,12 +10,12 @@ namespace ProjetPooGr5 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de MyForm11
+	/// Description résumée de FormPersonnel
 	/// </summary>
-	public ref class MyForm11 : public System::Windows::Forms::Form
+	public ref class FormPersonnel : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm11(void)
+		FormPersonnel(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace ProjetPooGr5 {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~MyForm11()
+		~FormPersonnel()
 		{
 			if (components)
 			{
@@ -50,7 +50,7 @@ namespace ProjetPooGr5 {
 		{
 			this->components = gcnew System::ComponentModel::Container();
 			this->Size = System::Drawing::Size(300,300);
-			this->Text = L"MyForm11";
+			this->Text = L"FormPersonnel";
 			this->Padding = System::Windows::Forms::Padding(0);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 		}

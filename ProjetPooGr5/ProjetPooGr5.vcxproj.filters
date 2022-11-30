@@ -18,10 +18,7 @@
     <ClCompile Include="MyFormAccueil.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="MyForm.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="MyForm1.cpp">
+    <ClCompile Include="FormPersonnel.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,10 +32,16 @@
     <ClInclude Include="CLClient.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MyForm.h">
-      <Filter>Fichiers sources</Filter>
+    <ClInclude Include="CLArticle.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="MyForm1.h">
+    <ClInclude Include="CLCommandes.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CLPaiements.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="FormPersonnel.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>

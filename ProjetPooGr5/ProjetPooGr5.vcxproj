@@ -122,17 +122,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyForm.cpp" />
-    <ClCompile Include="MyForm1.cpp" />
+    <ClCompile Include="FormPersonnel.cpp" />
     <ClCompile Include="MyFormAccueil.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CLArticle.h" />
+    <ClInclude Include="CLCommandes.h" />
+    <ClInclude Include="CLPaiements.h" />
     <ClInclude Include="CLpersonnel.h" />
     <ClInclude Include="CLClient.h" />
-    <ClInclude Include="MyForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="MyForm1.h">
+    <ClInclude Include="FormPersonnel.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormAccueil.h">
@@ -140,9 +139,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MyForm.resx">
-      <DependentUpon>MyForm.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MyFormAccueil.resx">
       <DependentUpon>MyFormAccueil.h</DependentUpon>
     </EmbeddedResource>
