@@ -123,12 +123,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="MyForm1.cpp" />
     <ClCompile Include="MyFormAccueil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLpersonnel.h" />
     <ClInclude Include="CLClient.h" />
     <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MyForm1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyFormAccueil.h">
