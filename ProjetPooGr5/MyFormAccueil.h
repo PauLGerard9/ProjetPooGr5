@@ -245,7 +245,7 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	this->Hide(); // sert a cacher la fenetre 
 	//ProjetPooGr5::MyForm MyForm23;
 	//MyForm23.ShowDialog(); // affiche 
-	//this->Close();
+	this->Close();
 	FormPersonnel^ maForm1 = gcnew FormPersonnel();
 	maForm1->Show();
 }
