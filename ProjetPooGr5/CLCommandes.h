@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+#include <tools.h>
 
 class CLCommandes{
   private:
