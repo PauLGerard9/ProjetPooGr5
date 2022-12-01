@@ -150,6 +150,7 @@
     <ClInclude Include="FormStock.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="CLcad.h" />
     <ClInclude Include="tools.h" />
     <ClInclude Include="MyFormAccueil.h">
       <FileType>CppForm</FileType>

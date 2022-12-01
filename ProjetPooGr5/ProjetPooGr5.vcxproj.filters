@@ -71,5 +71,8 @@
     <ClInclude Include="FormStatistique.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="CLcad.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
