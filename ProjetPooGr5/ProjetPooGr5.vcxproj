@@ -128,6 +128,7 @@
     <ClCompile Include="FormStatistique.cpp" />
     <ClCompile Include="FormStock.cpp" />
     <ClCompile Include="MyFormAccueil.cpp" />
+    <ClCompile Include="CLcad.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLArticle.h" />
