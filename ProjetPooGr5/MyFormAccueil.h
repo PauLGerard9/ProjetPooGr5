@@ -1,5 +1,11 @@
 #pragma once
 #include "FormPersonnel.h"
+#include "FormCommande.h"
+#include "FormClient.h"
+#include "FormStock.h"
+#include "FormStatistique.h"
+
+
 namespace ProjetPooGr5 {
 
 	using namespace System;
@@ -101,6 +107,7 @@ namespace ProjetPooGr5 {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"stocks";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// button3
 			// 
@@ -199,6 +206,7 @@ namespace ProjetPooGr5 {
 			this->button4->TabIndex = 10;
 			this->button4->Text = L"commandes";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
 			// button5
 			// 
@@ -209,6 +217,7 @@ namespace ProjetPooGr5 {
 			this->button5->TabIndex = 11;
 			this->button5->Text = L"statistiques";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
 			// MyForm
 			// 
@@ -236,6 +245,8 @@ namespace ProjetPooGr5 {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		FormClient^ maForm1 = gcnew FormClient();
+		maForm1->Show();
 	}
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -246,6 +257,18 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	FormPersonnel^ maForm1 = gcnew FormPersonnel(); 
 	maForm1->Show();
 	
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormStock^ maForm1 = gcnew FormStock();
+	maForm1->Show();
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormCommande^ maForm1 = gcnew FormCommande();
+	maForm1->Show();
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormStatistique^ maForm1 = gcnew FormStatistique();
+	maForm1->Show();
 }
 };
 }
