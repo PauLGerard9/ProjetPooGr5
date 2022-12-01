@@ -10,12 +10,12 @@ namespace ProjetPooGr5 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Description résumée de FormPersonnel
+	/// Description résumée de FormStatistique
 	/// </summary>
-	public ref class FormPersonnel : public System::Windows::Forms::Form
+	public ref class FormStatistique : public System::Windows::Forms::Form
 	{
 	public:
-		FormPersonnel(void)
+		FormStatistique(void)
 		{
 			InitializeComponent();
 			//
@@ -27,21 +27,13 @@ namespace ProjetPooGr5 {
 		/// <summary>
 		/// Nettoyage des ressources utilisées.
 		/// </summary>
-		~FormPersonnel()
+		~FormStatistique()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
-
-
-	private: System::Windows::Forms::Button^ button3;
-
-
-	protected:
-
-	protected:
 
 	private:
 		/// <summary>
@@ -56,36 +48,18 @@ namespace ProjetPooGr5 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// button3
-			// 
-			this->button3->Location = System::Drawing::Point(621, 304);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(75, 23);
-			this->button3->TabIndex = 2;
-			this->button3->Text = L"retour";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &FormPersonnel::button3_Click);
-			// 
-			// FormPersonnel
+			// FormStatistique
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(708, 339);
-			this->Controls->Add(this->button3);
-			this->Name = L"FormPersonnel";
-			this->Text = L"FormPersonnel";
+			this->ClientSize = System::Drawing::Size(650, 378);
+			this->Name = L"FormStatistique";
+			this->Text = L"FormStatistique";
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	 
-	}
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
 	};
 }

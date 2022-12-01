@@ -123,7 +123,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FormClient.cpp" />
+    <ClCompile Include="FormCommande.cpp" />
     <ClCompile Include="FormPersonnel.cpp" />
+    <ClCompile Include="FormStatistique.cpp" />
+    <ClCompile Include="FormStock.cpp" />
     <ClCompile Include="MyFormAccueil.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -135,7 +138,16 @@
     <ClInclude Include="FormClient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FormCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FormPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormStatistique.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormStock.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="tools.h" />
@@ -146,6 +158,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormPersonnel.resx">
       <DependentUpon>FormPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStatistique.resx">
+      <DependentUpon>FormStatistique.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormAccueil.resx">
       <DependentUpon>MyFormAccueil.h</DependentUpon>
