@@ -61,7 +61,7 @@ namespace ProjetPooGr5 {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(621, 304);
+			this->button3->Location = System::Drawing::Point(797, 373);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(75, 23);
 			this->button3->TabIndex = 2;
@@ -73,7 +73,7 @@ namespace ProjetPooGr5 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(708, 339);
+			this->ClientSize = System::Drawing::Size(884, 408);
 			this->Controls->Add(this->button3);
 			this->Name = L"FormPersonnel";
 			this->Text = L"FormPersonnel";

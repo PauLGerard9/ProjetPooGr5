@@ -159,11 +159,17 @@
     <EmbeddedResource Include="FormClient.resx">
       <DependentUpon>FormClient.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCommande.resx">
+      <DependentUpon>FormCommande.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPersonnel.resx">
       <DependentUpon>FormPersonnel.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStatistique.resx">
       <DependentUpon>FormStatistique.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStock.resx">
+      <DependentUpon>FormStock.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyFormAccueil.resx">
       <DependentUpon>MyFormAccueil.h</DependentUpon>
