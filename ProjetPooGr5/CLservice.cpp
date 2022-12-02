@@ -1,9 +1,9 @@
-#include "CLservices.h"
+#include "CLservice.h"
 
 NS_Comp_Svc::CLservices::CLservices(void)
 {
 	this->oCad = gcnew NS_Comp_Data::CLcad();
-	this->oMappTB = gcnew NS_Comp_Mappage::CLmapTB();
+	this->oMappTB = gcnew NS_Comp_Mappage::CLmap();
 }
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerToutesLesPersonnes(System::String^ dataTableName)
 {

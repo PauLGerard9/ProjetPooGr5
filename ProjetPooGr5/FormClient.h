@@ -1,4 +1,6 @@
 #pragma once
+#include "CLservice.h"
+
 
 namespace ProjetPooGr5 {
 
@@ -8,6 +10,8 @@ namespace ProjetPooGr5 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+
+
 
 	/// <summary>
 	/// Description résumée de FormClient
@@ -37,6 +41,10 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
+
+	private: NS_Comp_Svc::CLservices^ oSvc;
+	private: System::Data::DataSet^ oDs;
+
 	protected:
 
 	private:
