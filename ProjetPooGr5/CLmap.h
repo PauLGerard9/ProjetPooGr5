@@ -3,7 +3,7 @@
 
 namespace NS_Comp_Mappage
 {
-	ref class CLmapTB
+	ref class CLmap
 	{
 	private:
 		System::String^ sSql;

@@ -122,6 +122,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CLservice.cpp" />
     <ClCompile Include="FormClient.cpp" />
     <ClCompile Include="FormCommande.cpp" />
     <ClCompile Include="FormPersonnel.cpp" />
@@ -154,6 +155,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="CLcad.h" />
+    <ClInclude Include="CLservice.h" />
     <ClInclude Include="tools.h" />
     <ClInclude Include="MyFormAccueil.h">
       <FileType>CppForm</FileType>

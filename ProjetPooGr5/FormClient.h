@@ -36,6 +36,7 @@ namespace ProjetPooGr5 {
 		}
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	protected:
 
 	private:
@@ -53,13 +54,16 @@ namespace ProjetPooGr5 {
 		{
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(780, 364);
+			this->button1->Location = System::Drawing::Point(585, 296);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(56, 19);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"retour";
 			this->button1->UseVisualStyleBackColor = true;
@@ -67,28 +71,47 @@ namespace ProjetPooGr5 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(386, 153);
+			this->button2->Location = System::Drawing::Point(270, 209);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(232, 131);
+			this->button2->Size = System::Drawing::Size(174, 106);
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"bouton vico";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &FormClient::button2_Click);
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Location = System::Drawing::Point(26, 12);
+			this->dataGridView1->Name = L"dataGridView1";
+			this->dataGridView1->Size = System::Drawing::Size(457, 167);
+			this->dataGridView1->TabIndex = 2;
 			// 
 			// FormClient
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(876, 403);
+			this->ClientSize = System::Drawing::Size(657, 327);
+			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"FormClient";
 			this->Text = L"FormClient";
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->dataGridView1->Refresh();
+		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("Rsl");
+		this->dataGridView1->DataSource = this->oDs;
+		this->dataGridView1->DataMember = "Rsl";
 	}
 	};
 }
