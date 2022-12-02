@@ -129,10 +129,12 @@
     <ClCompile Include="FormStock.cpp" />
     <ClCompile Include="MyFormAccueil.cpp" />
     <ClCompile Include="CLcad.cpp" />
+    <ClCompile Include="CLmap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLArticle.h" />
     <ClInclude Include="CLCommandes.h" />
+    <ClInclude Include="CLmap.h" />
     <ClInclude Include="CLPaiements.h" />
     <ClInclude Include="CLpersonnel.h" />
     <ClInclude Include="CLClient.h" />
