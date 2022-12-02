@@ -58,6 +58,7 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button5;
 
+
 	private:
 		/// <summary>
 		/// Variable nécessaire au concepteur.
