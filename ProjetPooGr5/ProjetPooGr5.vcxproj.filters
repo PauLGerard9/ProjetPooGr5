@@ -33,7 +33,13 @@
     <ClCompile Include="FormStatistique.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="FormLogin.cpp">
+    <ClCompile Include="CLcad.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CLmap.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CLservice.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -74,8 +80,14 @@
     <ClInclude Include="FormStatistique.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
-    <ClInclude Include="FormLogin.h">
-      <Filter>Fichiers sources</Filter>
+    <ClInclude Include="CLservice.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CLmap.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CLcad.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
