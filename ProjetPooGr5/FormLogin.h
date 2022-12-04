@@ -1,5 +1,5 @@
 #pragma once
-#include "FormStatistique.h"
+#include "FormAccueil.h"
 namespace ProjetPooGr5 {
 
 	using namespace System;
@@ -169,10 +169,9 @@ private: System::Void btnok_Click(System::Object^ sender, System::EventArgs^ e) 
 			return;
 	}
 
-	if (email == "123@gmail.com" && password == "mdp123")
+	if (email == "1" && password == "1")
 	{
-		this->Close();
-		FormStatistique^ maForm1 = gcnew FormStatistique();
+		FormAccueil^ maForm1 = gcnew FormAccueil();
 		maForm1->Show();
 	}
 }

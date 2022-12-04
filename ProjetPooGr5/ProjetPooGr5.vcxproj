@@ -122,13 +122,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="FormAccueil.cpp" />
     <ClCompile Include="FormClient.cpp" />
     <ClCompile Include="FormCommande.cpp" />
     <ClCompile Include="FormLogin.cpp" />
     <ClCompile Include="FormPersonnel.cpp" />
     <ClCompile Include="FormStatistique.cpp" />
     <ClCompile Include="FormStock.cpp" />
-    <ClCompile Include="MyFormAccueil.cpp" />
     <ClCompile Include="CLcad.cpp" />
     <ClCompile Include="CLmap.cpp" />
     <ClCompile Include="CLservice.cpp" />
@@ -139,6 +139,9 @@
     <ClInclude Include="CLPaiements.h" />
     <ClInclude Include="CLpersonnel.h" />
     <ClInclude Include="CLClient.h" />
+    <ClInclude Include="FormAccueil.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FormClient.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -161,11 +164,11 @@
     <ClInclude Include="CLmap.h" />
     <ClInclude Include="CLcad.h" />
     <ClInclude Include="tools.h" />
-    <ClInclude Include="MyFormAccueil.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAccueil.resx">
+      <DependentUpon>FormAccueil.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormClient.resx">
       <DependentUpon>FormClient.h</DependentUpon>
     </EmbeddedResource>
@@ -183,9 +186,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormStock.resx">
       <DependentUpon>FormStock.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyFormAccueil.resx">
-      <DependentUpon>MyFormAccueil.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
