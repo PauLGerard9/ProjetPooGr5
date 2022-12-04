@@ -71,7 +71,7 @@ namespace ProjetPooGr5 {
 			this->label1->AutoSize = true;
 			this->label1->Location = System::Drawing::Point(93, 71);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(86, 32);
+			this->label1->Size = System::Drawing::Size(65, 26);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Login";
 			this->label1->Click += gcnew System::EventHandler(this, &FormLogin::label1_Click);
@@ -81,7 +81,7 @@ namespace ProjetPooGr5 {
 			this->label2->AutoSize = true;
 			this->label2->Location = System::Drawing::Point(93, 193);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(87, 32);
+			this->label2->Size = System::Drawing::Size(68, 26);
 			this->label2->TabIndex = 1;
 			this->label2->Text = L"Email";
 			// 
@@ -89,15 +89,16 @@ namespace ProjetPooGr5 {
 			// 
 			this->TBemail->Location = System::Drawing::Point(295, 193);
 			this->TBemail->Name = L"TBemail";
-			this->TBemail->Size = System::Drawing::Size(565, 38);
+			this->TBemail->Size = System::Drawing::Size(565, 32);
 			this->TBemail->TabIndex = 2;
+			this->TBemail->TextChanged += gcnew System::EventHandler(this, &FormLogin::TBemail_TextChanged);
 			// 
 			// Label3
 			// 
 			this->Label3->AutoSize = true;
 			this->Label3->Location = System::Drawing::Point(93, 297);
 			this->Label3->Name = L"Label3";
-			this->Label3->Size = System::Drawing::Size(139, 32);
+			this->Label3->Size = System::Drawing::Size(108, 26);
 			this->Label3->TabIndex = 3;
 			this->Label3->Text = L"Password";
 			// 
@@ -106,7 +107,7 @@ namespace ProjetPooGr5 {
 			this->TBPassword->Location = System::Drawing::Point(295, 306);
 			this->TBPassword->Name = L"TBPassword";
 			this->TBPassword->PasswordChar = '*';
-			this->TBPassword->Size = System::Drawing::Size(565, 38);
+			this->TBPassword->Size = System::Drawing::Size(565, 32);
 			this->TBPassword->TabIndex = 4;
 			// 
 			// btnok
@@ -131,7 +132,7 @@ namespace ProjetPooGr5 {
 			// 
 			// FormLogin
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(16, 31);
+			this->AutoScaleDimensions = System::Drawing::SizeF(13, 26);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
 				static_cast<System::Int32>(static_cast<System::Byte>(255)));
@@ -174,6 +175,8 @@ private: System::Void btnok_Click(System::Object^ sender, System::EventArgs^ e) 
 		FormStatistique^ maForm1 = gcnew FormStatistique();
 		maForm1->Show();
 	}
+}
+private: System::Void TBemail_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
