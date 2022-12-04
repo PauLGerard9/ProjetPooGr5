@@ -2,12 +2,19 @@
 
 System::String^ NS_Comp_Mappage::CLmap::Select(void)
 {
-	return "SELECT [Id_humain], [Nom], [Prenom] FROM [Test3].[dbo].[Humain]";
+	return "SELECT Nom, prenom FROM client LEFT JOIN humain ON Client.Id_humain = Humain.Id_humain; ";
 }
-System::String^ NS_Comp_Mappage::CLmap::Insert(void)
+System::String^ NS_Comp_Mappage::CLmap::Insert_humain(void)
 {
-	return "INSERT INTO TB_P6 (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "');";
+	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "');";
 }
+
+System::String^ NS_Comp_Mappage::CLmap::Insert_client(void)
+{
+	return "INSERT INTO Client (num_client) VALUES('" + this->num_client + "');";
+}
+
+
 System::String^ NS_Comp_Mappage::CLmap::Delete(void)
 {
 	return "";
@@ -16,9 +23,9 @@ System::String^ NS_Comp_Mappage::CLmap::Update(void)
 {
 	return "";
 }
-void NS_Comp_Mappage::CLmap::setId(int Id)
+void NS_Comp_Mappage::CLmap::set_num_client(System::String^ num_client)
 {
-	this->Id = Id;
+	this->num_client = num_client;
 }
 void NS_Comp_Mappage::CLmap::setNom(System::String^ nom)
 {
@@ -28,6 +35,6 @@ void NS_Comp_Mappage::CLmap::setPrenom(System::String^ prenom)
 {
 	this->prenom = prenom;
 }
-int NS_Comp_Mappage::CLmap::getId(void) { return this->Id; }
+System::String^ NS_Comp_Mappage::CLmap::getnum_client(void) { return this->num_client; }
 System::String^ NS_Comp_Mappage::CLmap::getNom(void) { return this->nom; }
 System::String^ NS_Comp_Mappage::CLmap::getPrenom(void) { return this->prenom; }
