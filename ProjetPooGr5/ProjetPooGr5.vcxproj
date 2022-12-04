@@ -124,6 +124,7 @@
   <ItemGroup>
     <ClCompile Include="FormClient.cpp" />
     <ClCompile Include="FormCommande.cpp" />
+    <ClCompile Include="FormLogin.cpp" />
     <ClCompile Include="FormPersonnel.cpp" />
     <ClCompile Include="FormStatistique.cpp" />
     <ClCompile Include="FormStock.cpp" />
@@ -139,6 +140,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FormCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormLogin.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FormPersonnel.h">
@@ -161,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCommande.resx">
       <DependentUpon>FormCommande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPersonnel.resx">
       <DependentUpon>FormPersonnel.h</DependentUpon>
