@@ -7,7 +7,7 @@ namespace NS_Comp_Mappage
 	ref class CLmap{
 		private:
 		System::String^ sSql;
-		System::String^ num_client;
+		System::String^ id_client;
 		System::String^ nom;
 		System::String^ prenom;
 		System::String^ id_date_premiere_commande;
@@ -20,10 +20,9 @@ namespace NS_Comp_Mappage
 		System::String^ SelectPersonnel(void);
 		System::String^ SelectStock(void);
 		System::String^ Insert_humain(void);
-		
-		System::String^ Delete(void);
+		System::String^ Delete_client(void);
 		System::String^ Update(void);
-		void set_num_client(System::String^);
+
 		void setNom(System::String^);
 		void setPrenom(System::String^);
 		void set_id_date_premiere_commande(System::String^ Id_date_premiere_commande);
@@ -31,7 +30,7 @@ namespace NS_Comp_Mappage
 		void set_id_date_naissance(System::String^ id_date_naissance);
 		void set_id_adresses_livraison(System::String^ id_adresses_livraison);
 		void set_id_humain(System::String^ Id_humain);
-
+		void setid_client(System::String^ id_client);
 		
 		System::String^ getNom(void);
 		System::String^ getPrenom(void);

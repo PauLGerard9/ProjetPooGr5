@@ -69,6 +69,20 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::TextBox^ txt_id_adresses_livraison;
+	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::TextBox^ id_client;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::TextBox^ txt_id_client_mod;
+
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::TextBox^ txt_colonne_a_changer;
+
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::TextBox^ txt_nouvel_valeur;
+	private: System::Windows::Forms::Button^ button6;
+
 
 
 
@@ -104,6 +118,17 @@ namespace ProjetPooGr5 {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->txt_id_adresses_livraison = (gcnew System::Windows::Forms::TextBox());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->id_client = (gcnew System::Windows::Forms::TextBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->txt_id_client_mod = (gcnew System::Windows::Forms::TextBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->txt_colonne_a_changer = (gcnew System::Windows::Forms::TextBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->txt_nouvel_valeur = (gcnew System::Windows::Forms::TextBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -128,7 +153,7 @@ namespace ProjetPooGr5 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(713, 189);
+			this->button2->Location = System::Drawing::Point(716, 177);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(108, 23);
 			this->button2->TabIndex = 2;
@@ -257,11 +282,115 @@ namespace ProjetPooGr5 {
 			this->txt_id_adresses_livraison->Size = System::Drawing::Size(179, 20);
 			this->txt_id_adresses_livraison->TabIndex = 16;
 			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(331, 177);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(126, 23);
+			this->button4->TabIndex = 17;
+			this->button4->Text = L"supprimer client";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &FormClient::button4_Click);
+			// 
+			// id_client
+			// 
+			this->id_client->Location = System::Drawing::Point(328, 219);
+			this->id_client->Name = L"id_client";
+			this->id_client->Size = System::Drawing::Size(126, 20);
+			this->id_client->TabIndex = 18;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(328, 203);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(43, 13);
+			this->label8->TabIndex = 19;
+			this->label8->Text = L"id client";
+			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(527, 177);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(126, 23);
+			this->button5->TabIndex = 20;
+			this->button5->Text = L"modifier client";
+			this->button5->UseVisualStyleBackColor = true;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(524, 203);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(43, 13);
+			this->label9->TabIndex = 21;
+			this->label9->Text = L"id client";
+			// 
+			// txt_id_client_mod
+			// 
+			this->txt_id_client_mod->Location = System::Drawing::Point(527, 219);
+			this->txt_id_client_mod->Name = L"txt_id_client_mod";
+			this->txt_id_client_mod->Size = System::Drawing::Size(126, 20);
+			this->txt_id_client_mod->TabIndex = 22;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(524, 242);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(102, 13);
+			this->label10->TabIndex = 23;
+			this->label10->Text = L"colonne_à_changer";
+			this->label10->Click += gcnew System::EventHandler(this, &FormClient::label10_Click);
+			// 
+			// txt_colonne_a_changer
+			// 
+			this->txt_colonne_a_changer->Location = System::Drawing::Point(527, 258);
+			this->txt_colonne_a_changer->Name = L"txt_colonne_a_changer";
+			this->txt_colonne_a_changer->Size = System::Drawing::Size(126, 20);
+			this->txt_colonne_a_changer->TabIndex = 24;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(524, 281);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(71, 13);
+			this->label11->TabIndex = 25;
+			this->label11->Text = L"nouvel valeur";
+			// 
+			// txt_nouvel_valeur
+			// 
+			this->txt_nouvel_valeur->Location = System::Drawing::Point(527, 297);
+			this->txt_nouvel_valeur->Name = L"txt_nouvel_valeur";
+			this->txt_nouvel_valeur->Size = System::Drawing::Size(126, 20);
+			this->txt_nouvel_valeur->TabIndex = 26;
+			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(716, 217);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(108, 23);
+			this->button6->TabIndex = 27;
+			this->button6->Text = L"afficher table client";
+			this->button6->UseVisualStyleBackColor = true;
+			// 
 			// FormClient
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(894, 490);
+			this->Controls->Add(this->button6);
+			this->Controls->Add(this->txt_nouvel_valeur);
+			this->Controls->Add(this->label11);
+			this->Controls->Add(this->txt_colonne_a_changer);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->txt_id_client_mod);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->button5);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->id_client);
+			this->Controls->Add(this->button4);
 			this->Controls->Add(this->txt_id_adresses_livraison);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -306,6 +435,10 @@ namespace ProjetPooGr5 {
 		this->oSvc = gcnew NS_Comp_Svc::CLservice();
 		this->oSvc->ajouterUnclient(this->txt_nom->Text, this->txt_prenom->Text, this->txt_Id_date_premiere_commande->Text, this->txt_id_adresse_facturation->Text, this->txt_id_date_naissance->Text, this->txt_id_adresses_livraison->Text);
 	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservice();
+		this->oSvc->supprimerUnclient(this->id_client->Text);
+	}
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -319,6 +452,9 @@ private: System::Void textBox2_TextChanged_1(System::Object^ sender, System::Eve
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+
+private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

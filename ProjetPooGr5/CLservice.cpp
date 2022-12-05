@@ -43,3 +43,14 @@ void NS_Comp_Svc::CLservice::ajouterUnclient(System::String^ nom, System::String
 
 	this->oCad->actionRows(sql);
 }
+
+void NS_Comp_Svc::CLservice::supprimerUnclient(System::String^ id_client)
+{
+	System::String^ sql;
+
+	this->oMapp->setid_client(id_client);
+	
+	sql = this->oMapp->Insert_humain();
+
+	this->oCad->actionRows(sql);
+}
