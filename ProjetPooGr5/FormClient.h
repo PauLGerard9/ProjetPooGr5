@@ -70,7 +70,7 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::TextBox^ txt_id_adresses_livraison;
 
-	private: System::Windows::Forms::TextBox^ txt_id_humain;
+
 
 	protected:
 
@@ -104,7 +104,6 @@ namespace ProjetPooGr5 {
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->txt_id_adresses_livraison = (gcnew System::Windows::Forms::TextBox());
-			this->txt_id_humain = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -236,41 +235,33 @@ namespace ProjetPooGr5 {
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(82, 437);
+			this->label6->Location = System::Drawing::Point(82, 398);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(110, 13);
 			this->label6->TabIndex = 14;
 			this->label6->Text = L"ID_adresses_livraison";
+			this->label6->Click += gcnew System::EventHandler(this, &FormClient::label6_Click);
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(85, 398);
+			this->label7->Location = System::Drawing::Point(114, 398);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(55, 13);
+			this->label7->Size = System::Drawing::Size(0, 13);
 			this->label7->TabIndex = 15;
-			this->label7->Text = L"id_humain";
 			// 
 			// txt_id_adresses_livraison
 			// 
-			this->txt_id_adresses_livraison->Location = System::Drawing::Point(85, 453);
+			this->txt_id_adresses_livraison->Location = System::Drawing::Point(85, 414);
 			this->txt_id_adresses_livraison->Name = L"txt_id_adresses_livraison";
 			this->txt_id_adresses_livraison->Size = System::Drawing::Size(179, 20);
 			this->txt_id_adresses_livraison->TabIndex = 16;
-			// 
-			// txt_id_humain
-			// 
-			this->txt_id_humain->Location = System::Drawing::Point(85, 414);
-			this->txt_id_humain->Name = L"txt_id_humain";
-			this->txt_id_humain->Size = System::Drawing::Size(179, 20);
-			this->txt_id_humain->TabIndex = 17;
 			// 
 			// FormClient
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(894, 490);
-			this->Controls->Add(this->txt_id_humain);
 			this->Controls->Add(this->txt_id_adresses_livraison);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -327,6 +318,8 @@ private: System::Void txt_nom_TextChanged(System::Object^ sender, System::EventA
 private: System::Void textBox2_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label6_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
