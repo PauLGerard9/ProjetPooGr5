@@ -17,7 +17,7 @@ System::String^ NS_Comp_Mappage::CLmap::SelectStock(void)
 
 System::String^ NS_Comp_Mappage::CLmap::Insert_humain(void)
 {
-	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "');INSERT INTO Client ([Id_date_naissance],[Id_date_premiere_commande],[ID_adresses_facturation], [id_humain],[ID_adresses_livraison]) VALUES('" + this->id_date_naissance + "','" + this->id_date_premiere_commande + "','" + this->id_adresse_facturation + "', (SELECT max(id_humain)FROM humain) ,'" + this->id_adresses_livraison + "');";
+	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "');INSERT INTO DATE_ (date_) VALUES ('" + this->id_date_naissance + "'),('" + this->id_date_premiere_commande + "');INSERT INTO Client ([Id_date_naissance],[Id_date_premiere_commande],[ID_adresses_facturation], [id_humain],[ID_adresses_livraison]) VALUES((SELECT TOP 1 percent id_date FROM date_ WHERE date_ = '" + this->id_date_naissance + "'),(SELECT TOP 1 percent id_date FROM date_ WHERE date_ = '" + this->id_date_premiere_commande + "'),'" + this->id_adresse_facturation + "', (SELECT TOP 1 percent id_humain FROM humain WHERE nom = '" + this->nom + "' and prenom = '" + this->prenom + "'),'" + this->id_adresses_livraison + "');";
 }
 
 
