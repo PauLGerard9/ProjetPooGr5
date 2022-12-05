@@ -10,6 +10,11 @@ namespace NS_Comp_Mappage
 		System::String^ num_client;
 		System::String^ nom;
 		System::String^ prenom;
+		System::String^ id_date_premiere_commande;
+		System::String^ id_adresse_facturation;
+		System::String^ id_date_naissance;
+		System::String^ id_adresses_livraison;
+		System::String^ id_humain;
 	public:
 		System::String^ Select(void);
 		System::String^ Insert_humain(void);
@@ -19,9 +24,21 @@ namespace NS_Comp_Mappage
 		void set_num_client(System::String^);
 		void setNom(System::String^);
 		void setPrenom(System::String^);
-		System::String^ getnum_client(void);
+		void set_id_date_premiere_commande(System::String^ Id_date_premiere_commande);
+		void set_id_adresse_facturation(System::String^ id_adresse_facturation);
+		void set_id_date_naissance(System::String^ id_date_naissance);
+		void set_id_adresses_livraison(System::String^ id_adresses_livraison);
+		void set_id_humain(System::String^ Id_humain);
+
+		
 		System::String^ getNom(void);
 		System::String^ getPrenom(void);
+		System::String^ getid_date_premiere_commande(void);
+		System::String^ getid_adresse_facturation(void);
+		System::String^ getid_date_naissance(void);
+		System::String^ getid_adresses_livraison(void);
+		System::String^ getid_humain(void);
+		
 	};
 }
 

@@ -23,11 +23,15 @@ void NS_Comp_Svc::CLservice::ajouterUnePersonne(System::String^ nom, System::Str
 
 	this->oCad->actionRows(sql);
 }
-void NS_Comp_Svc::CLservice::ajouterUnclient(System::String^ num_client)
+void NS_Comp_Svc::CLservice::ajouterUnclient(System::String^ Id_date_premiere_commande, System::String^ id_adresse_facturation, System::String^ id_date_naissance, System::String^ id_adresses_livraison)
 {
 	System::String^ sql;
 
-	this->oMapp->set_num_client(num_client);
+	this->oMapp->set_id_date_premiere_commande(Id_date_premiere_commande);
+	this->oMapp->set_id_adresse_facturation(id_adresse_facturation);
+	this->oMapp->set_id_date_naissance(id_date_naissance);
+	this->oMapp->set_id_adresses_livraison(id_adresses_livraison);
+	//this->oMapp->set_id_humain(id_humain);
 	
 	sql = this->oMapp->Insert_client();
 
