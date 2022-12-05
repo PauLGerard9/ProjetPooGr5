@@ -95,7 +95,7 @@ namespace ProjetPooGr5 {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(797, 373);
+			this->button3->Location = System::Drawing::Point(1104, 488);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(75, 23);
 			this->button3->TabIndex = 2;
@@ -225,9 +225,9 @@ namespace ProjetPooGr5 {
 			this->button1->Location = System::Drawing::Point(114, 216);
 			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(100, 28);
+			this->button1->Size = System::Drawing::Size(188, 28);
 			this->button1->TabIndex = 19;
-			this->button1->Text = L"Inserer client";
+			this->button1->Text = L"Inserer personnel";
 			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// button2

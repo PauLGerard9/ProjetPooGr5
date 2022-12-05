@@ -10,6 +10,11 @@ System::String^ NS_Comp_Mappage::CLmap::SelectPersonnel(void)
 }
 
 
+System::String^ NS_Comp_Mappage::CLmap::SelectStock(void)
+{
+	return "SELECT * FROM Article ;";
+}
+
 System::String^ NS_Comp_Mappage::CLmap::Insert_humain(void)
 {
 	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "');";

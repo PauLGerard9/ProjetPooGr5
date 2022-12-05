@@ -20,6 +20,15 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerTousLePersonnel(Syste
 	sql = this->oMapp->SelectPersonnel();
 	return this->oCad->getRows(sql, dataTableName);
 }
+
+System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerTousLeStock(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMapp->SelectStock();
+	return this->oCad->getRows(sql, dataTableName);
+}
+
 void NS_Comp_Svc::CLservice::ajouterUnePersonne(System::String^ nom, System::String^ prenom)
 {
 	System::String^ sql;

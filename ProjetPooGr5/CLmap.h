@@ -18,6 +18,7 @@ namespace NS_Comp_Mappage
 	public:
 		System::String^ Select(void);
 		System::String^ SelectPersonnel(void);
+		System::String^ SelectStock(void);
 		System::String^ Insert_humain(void);
 		System::String^ Insert_client(void);
 		System::String^ Delete(void);
