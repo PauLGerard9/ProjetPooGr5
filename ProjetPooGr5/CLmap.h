@@ -20,7 +20,7 @@ namespace NS_Comp_Mappage
 		System::String^ SelectPersonnel(void);
 		System::String^ SelectStock(void);
 		System::String^ Insert_humain(void);
-		System::String^ Insert_client(void);
+		
 		System::String^ Delete(void);
 		System::String^ Update(void);
 		void set_num_client(System::String^);

@@ -194,9 +194,9 @@ namespace ProjetPooGr5 {
 			this->label3->AutoSize = true;
 			this->label3->Location = System::Drawing::Point(82, 281);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(147, 13);
+			this->label3->Size = System::Drawing::Size(132, 13);
 			this->label3->TabIndex = 9;
-			this->label3->Text = L"Id_date_premiere_commande";
+			this->label3->Text = L"date_premiere_commande";
 			this->label3->Click += gcnew System::EventHandler(this, &FormClient::label3_Click);
 			// 
 			// txt_id_adresse_facturation
@@ -228,9 +228,9 @@ namespace ProjetPooGr5 {
 			this->label5->AutoSize = true;
 			this->label5->Location = System::Drawing::Point(82, 320);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(97, 13);
+			this->label5->Size = System::Drawing::Size(82, 13);
 			this->label5->TabIndex = 13;
-			this->label5->Text = L"Id_date_naissance";
+			this->label5->Text = L"date_naissance";
 			// 
 			// label6
 			// 
@@ -304,8 +304,7 @@ namespace ProjetPooGr5 {
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->oSvc = gcnew NS_Comp_Svc::CLservice();
-		this->oSvc->ajouterUnePersonne(this->txt_nom->Text, this->txt_prenom->Text);
-		this->oSvc->ajouterUnclient(this->txt_Id_date_premiere_commande->Text, this->txt_id_adresse_facturation->Text, this->txt_id_date_naissance->Text, this->txt_id_adresses_livraison->Text);
+		this->oSvc->ajouterUnclient(this->txt_nom->Text, this->txt_prenom->Text, this->txt_Id_date_premiere_commande->Text, this->txt_id_adresse_facturation->Text, this->txt_id_date_naissance->Text, this->txt_id_adresses_livraison->Text);
 	}
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }

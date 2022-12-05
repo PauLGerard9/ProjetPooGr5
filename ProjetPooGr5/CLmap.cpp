@@ -17,13 +17,9 @@ System::String^ NS_Comp_Mappage::CLmap::SelectStock(void)
 
 System::String^ NS_Comp_Mappage::CLmap::Insert_humain(void)
 {
-	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "');";
+	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "');INSERT INTO Client ([Id_date_naissance],[Id_date_premiere_commande],[ID_adresses_facturation], [id_humain],[ID_adresses_livraison]) VALUES('" + this->id_date_naissance + "','" + this->id_date_premiere_commande + "','" + this->id_adresse_facturation + "', (SELECT max(id_humain)FROM humain) ,'" + this->id_adresses_livraison + "');";
 }
 
-System::String^ NS_Comp_Mappage::CLmap::Insert_client(void)
-{
-	return "INSERT INTO Client ([Id_date_naissance],[Id_date_premiere_commande],[ID_adresses_facturation], [id_humain],[ID_adresses_livraison]) VALUES('" + this->id_date_naissance + "','"+ this->id_date_premiere_commande +"','"+ this->id_adresse_facturation +"', (SELECT max(id_humain)FROM humain) ,'"	+ this->id_adresses_livraison+ "');";
-}
 
 
 System::String^ NS_Comp_Mappage::CLmap::Delete(void)
