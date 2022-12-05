@@ -1,5 +1,5 @@
 #pragma once
-
+#include "CLservice.h"
 namespace ProjetPooGr5 {
 
 	using namespace System;
@@ -35,7 +35,8 @@ namespace ProjetPooGr5 {
 			}
 		}
 
-
+	private: NS_Comp_Svc::CLservice^ oSvc;
+	private: System::Data::DataSet^ oDs;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::TextBox^ txt_id_adresses_livraison;
 	private: System::Windows::Forms::Label^ label7;
@@ -238,6 +239,7 @@ namespace ProjetPooGr5 {
 			this->button2->TabIndex = 18;
 			this->button2->Text = L"afficher client";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &FormPersonnel::button2_Click);
 			// 
 			// dataGridView1
 			// 
@@ -285,5 +287,12 @@ namespace ProjetPooGr5 {
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
-	};
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->dataGridView1->Refresh();
+		this->oSvc = gcnew NS_Comp_Svc::CLservice();
+		this->oDs = this->oSvc->selectionnerToutesLesPersonnes("Rsl");
+		this->dataGridView1->DataSource = this->oDs;
+		this->dataGridView1->DataMember = "Rsl";
+	}
+};
 }
