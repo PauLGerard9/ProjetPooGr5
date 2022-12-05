@@ -4,6 +4,12 @@ System::String^ NS_Comp_Mappage::CLmap::Select(void)
 {
 	return "SELECT Nom, prenom FROM client LEFT JOIN humain ON Client.Id_humain = Humain.Id_humain; ";
 }
+System::String^ NS_Comp_Mappage::CLmap::SelectPersonnel(void)
+{
+	return "SELECT * FROM Humain INNER JOIN Personnel ON Humain.Id_humain = Personnel.Id_humain;";
+}
+
+
 System::String^ NS_Comp_Mappage::CLmap::Insert_humain(void)
 {
 	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "');";

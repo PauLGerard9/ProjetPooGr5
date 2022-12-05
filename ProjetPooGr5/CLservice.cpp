@@ -13,6 +13,13 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerToutesLesPersonnes(Sy
 	sql = this->oMapp->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
+System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerTousLePersonnel(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMapp->SelectPersonnel();
+	return this->oCad->getRows(sql, dataTableName);
+}
 void NS_Comp_Svc::CLservice::ajouterUnePersonne(System::String^ nom, System::String^ prenom)
 {
 	System::String^ sql;
