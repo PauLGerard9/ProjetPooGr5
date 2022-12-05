@@ -29,7 +29,6 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerTousLeStock(System::S
 	return this->oCad->getRows(sql, dataTableName);
 }
 
-void NS_Comp_Svc::CLservice::ajouterUnePersonne(System::String^ nom, System::String^ prenom)
 void NS_Comp_Svc::CLservice::ajouterUnclient(System::String^ nom, System::String^ prenom, System::String^ Id_date_premiere_commande, System::String^ id_adresse_facturation, System::String^ id_date_naissance, System::String^ id_adresses_livraison)
 {
 	System::String^ sql;
