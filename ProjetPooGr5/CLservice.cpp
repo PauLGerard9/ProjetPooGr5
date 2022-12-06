@@ -167,7 +167,12 @@ void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::Str
 		MessageBox::Show("Attention, vos noms et prenoms doivent commencer par une majuscule", "Oubli de majuscule", MessageBoxButtons::OK);
 		return;
 	}
+	try{  
+		
+	} 
+	catch (...) {
 
+	}
 	try
 	{
 		sql = this->oMapp->Insert_personnel();

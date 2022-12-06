@@ -127,6 +127,7 @@
     <ClCompile Include="FormCommande.cpp" />
     <ClCompile Include="FormLogin.cpp" />
     <ClCompile Include="FormPersonnel.cpp" />
+    <ClCompile Include="FormRequetePerso.cpp" />
     <ClCompile Include="FormStatistique.cpp" />
     <ClCompile Include="FormStock.cpp" />
     <ClCompile Include="CLcad.cpp" />
@@ -152,6 +153,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FormPersonnel.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FormRequetePerso.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FormStatistique.h">
@@ -180,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPersonnel.resx">
       <DependentUpon>FormPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRequetePerso.resx">
+      <DependentUpon>FormRequetePerso.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormStatistique.resx">
       <DependentUpon>FormStatistique.h</DependentUpon>

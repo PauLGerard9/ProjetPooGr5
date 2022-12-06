@@ -4,6 +4,7 @@
 #include "FormClient.h"
 #include "FormStock.h"
 #include "FormStatistique.h"
+#include "FormRequetePerso.h"
 
 namespace ProjetPooGr5 {
 
@@ -51,6 +52,8 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Label^ label4;
 
 	private:
 		/// <summary>
@@ -76,6 +79,8 @@ namespace ProjetPooGr5 {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button5
@@ -188,11 +193,32 @@ namespace ProjetPooGr5 {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &FormAccueil::button1_Click);
 			// 
+			// button6
+			// 
+			this->button6->Location = System::Drawing::Point(126, 320);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(172, 23);
+			this->button6->TabIndex = 23;
+			this->button6->Text = L"requete personnalisé";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &FormAccueil::button6_Click);
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(134, 286);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(147, 17);
+			this->label4->TabIndex = 24;
+			this->label4->Text = L"Requete personnalisé";
+			// 
 			// FormAccueil
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1099, 493);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->label9);
@@ -229,6 +255,10 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
 	FormStatistique^ maForm1 = gcnew FormStatistique();
+	maForm1->Show();
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	FormRequetePerso^ maForm1 = gcnew FormRequetePerso();
 	maForm1->Show();
 }
 };
