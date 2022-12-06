@@ -32,6 +32,7 @@ namespace NS_Comp_Svc
 
 		void supprimerUnPersonnel(System::String^ id_client);
 		void supprimerUnStock(System::String^ id_client);
+		void supprimerUneCommande(System::String^ id_client);
 
 		void modifierUnclient(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
 

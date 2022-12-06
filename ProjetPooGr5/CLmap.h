@@ -28,7 +28,7 @@ namespace NS_Comp_Mappage
 		System::String^ SelectPanierMoyen(void);
 		System::String^ Insert_humain(void);
 		System::String^ Delete_client(void);
-
+		System::String^ Delete_commande(void);
 		System::String^ Delete_personnel(void);
 		System::String^ Delete_stock(void);
 		

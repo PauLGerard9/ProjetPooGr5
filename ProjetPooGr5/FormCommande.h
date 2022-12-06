@@ -259,9 +259,9 @@ namespace ProjetPooGr5 {
 			this->label8->Location = System::Drawing::Point(444, 249);
 			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(87, 17);
+			this->label8->Size = System::Drawing::Size(92, 17);
 			this->label8->TabIndex = 51;
-			this->label8->Text = L"id Personnel";
+			this->label8->Text = L"id commande";
 			// 
 			// id_client
 			// 
@@ -280,6 +280,7 @@ namespace ProjetPooGr5 {
 			this->button4->TabIndex = 49;
 			this->button4->Text = L"supprimer Commande";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &FormCommande::button4_Click);
 			// 
 			// FormCommande
 			// 
@@ -324,5 +325,9 @@ namespace ProjetPooGr5 {
 		this->dataGridView1->DataSource = this->oDs;
 		this->dataGridView1->DataMember = "Rsl";
 	}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oSvc->supprimerUneCommande(this->id_client->Text);
+}
 };
 }
