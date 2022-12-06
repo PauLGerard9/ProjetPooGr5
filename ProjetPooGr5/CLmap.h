@@ -55,6 +55,7 @@ namespace NS_Comp_Mappage
 
 		System::String^ Update_client(void);
 		System::String^ Update_personnel(void);
+		System::String^ Update_article(void);
 
 
 		void setNom(System::String^);

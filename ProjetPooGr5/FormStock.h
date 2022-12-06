@@ -299,6 +299,7 @@ namespace ProjetPooGr5 {
 			this->button5->TabIndex = 39;
 			this->button5->Text = L"modifier stock";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &FormStock::button5_Click);
 			// 
 			// label9
 			// 
@@ -323,9 +324,9 @@ namespace ProjetPooGr5 {
 			this->label11->AutoSize = true;
 			this->label11->Location = System::Drawing::Point(521, 216);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(50, 13);
+			this->label11->Size = System::Drawing::Size(58, 13);
 			this->label11->TabIndex = 42;
-			this->label11->Text = L"Id_article";
+			this->label11->Text = L"Ref_article";
 			this->label11->Click += gcnew System::EventHandler(this, &FormStock::label11_Click);
 			// 
 			// txt_id_article
@@ -420,6 +421,11 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	   this->oSvc = gcnew NS_Comp_Svc::CLservice();
 	   this->oSvc->ajouterUnstock(this->txt_ref_article->Text, this->txt_nom_article->Text, this->txt_quantité->Text, this->txt_prix_ht->Text, this->txt_seuil_reapro->Text, this->txt_id_tva->Text);
    }
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservice();
+		this->oSvc->modifierUnstock(this->txt_id_article->Text, this->txt_colonne_a_changer->Text, this->txt_nouvel_valeur->Text);
+	}
+		  
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label11_Click(System::Object^ sender, System::EventArgs^ e) {
