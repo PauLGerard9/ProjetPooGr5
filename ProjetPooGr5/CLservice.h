@@ -13,7 +13,7 @@ namespace NS_Comp_Svc
 		CLservice(void);
 		System::Data::DataSet^ selectionnerToutesLesPersonnes(System::String^);
 		void ajouterUnclient(System::String^ nom, System::String^ prenom, System::String^ Id_date_premiere_commande, System::String^ id_adresse_facturation, System::String^ id_date_naissance, System::String^ id_adresses_livraison);
-		System::Data::DataSet^ selectionnerMontantClient(System::String^);
+		System::Data::DataSet^ selectionnerMontantClient(System::String^ dataTableName, System::String^ id_client);
 		System::Data::DataSet^ selectionnerTousLeStock(System::String^);
 		System::Data::DataSet^ selectionnerTousLePersonnel(System::String^);
 		System::Data::DataSet^ selectionnerToutCommande(System::String^);
@@ -24,7 +24,7 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ ArticleMoinsVendu(System::String^);
 		System::Data::DataSet^ ValeurCommercial(System::String^);
 		System::Data::DataSet^ ValeurAchat(System::String^);
-		System::Data::DataSet^ ChiffreAffaire(System::String^);
+		System::Data::DataSet^ ChiffreAffaire(System::String^ dataTableName, System::String^ id_client);
 		System::Data::DataSet^ Variation(System::String^);
 
 		void ajouterUnpersonnel(System::String^ nom, System::String^ prenom, System::String^ txt_Id_date_embauche, System::String^ txt_id_supérieur, System::String^ txt_id_adresse);
