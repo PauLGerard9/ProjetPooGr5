@@ -28,7 +28,7 @@ namespace NS_Comp_Mappage
 		System::String^ SelectPanierMoyen(void);
 		System::String^ Insert_humain(void);
 		System::String^ Delete_client(void);
-<<<<<<< HEAD
+		System::String^ Update_client(void);
 		System::String^ Delete_personnel(void);
 		System::String^ Delete_stock(void);
 		System::String^ Update(void);
@@ -42,9 +42,6 @@ namespace NS_Comp_Mappage
 
 
 
-=======
-		System::String^ Update_client(void);
->>>>>>> TEST42
 
 		void setNom(System::String^);
 		void setPrenom(System::String^);

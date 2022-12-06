@@ -138,26 +138,27 @@ void NS_Comp_Svc::CLservice::supprimerUnclient(System::String^ id_client)
 
 	this->oCad->actionRows(sql);
 }
-<<<<<<< HEAD
-
-
-void NS_Comp_Svc::CLservice::supprimerUnPersonnel(System::String^ id_client)
-=======
 void NS_Comp_Svc::CLservice::modifierUnclient(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur)
->>>>>>> TEST42
 {
 	System::String^ sql;
 
 	this->oMapp->setid_client(id_client);
-<<<<<<< HEAD
-
-	sql = this->oMapp->Delete_personnel();
-=======
 	this->oMapp->set_colonne_a_changer(txt_colonne_a_changer);
 	this->oMapp->set_txt_nouvel_valeur(txt_nouvel_valeur);
 	
 	sql = this->oMapp->Update_client();
->>>>>>> TEST42
+
+	this->oCad->actionRows(sql);
+}
+
+
+void NS_Comp_Svc::CLservice::supprimerUnPersonnel(System::String^ id_client)
+{
+	System::String^ sql;
+
+	this->oMapp->setid_client(id_client);
+
+	sql = this->oMapp->Delete_personnel();
 
 	this->oCad->actionRows(sql);
 }

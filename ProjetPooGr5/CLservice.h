@@ -29,8 +29,8 @@ namespace NS_Comp_Svc
 
 
 		void supprimerUnclient(System::String^ id_client);
-<<<<<<< HEAD
 		void supprimerUnPersonnel(System::String^ id_client);
+<<<<<<< HEAD
 <<<<<<< HEAD
 		void supprimerUnStock(System::String^ id_client);
 =======
@@ -38,6 +38,10 @@ namespace NS_Comp_Svc
 		void modifierUnclient(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
 >>>>>>> TEST42
 >>>>>>> TEST42
+=======
+
+		void modifierUnclient(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
+>>>>>>> test43
 
 		
 	};
