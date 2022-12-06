@@ -58,7 +58,7 @@ void NS_Comp_Svc::CLservice::supprimerUnclient(System::String^ id_client)
 
 	this->oMapp->setid_client(id_client);
 	
-	sql = this->oMapp->Insert_humain();
+	sql = this->oMapp->Delete_client();
 
 	this->oCad->actionRows(sql);
 }
