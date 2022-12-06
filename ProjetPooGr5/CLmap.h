@@ -28,6 +28,12 @@ namespace NS_Comp_Mappage
 		System::String^ PlusVendu(void);
 		System::String^ SelectMoinsVendu(void);
 		System::String^ MontantClient(void);
+		System::String^ SelectValeurCommercial(void);
+		System::String^ SelectValeurAchat(void);
+		System::String^ SelectChiffreAffaire(void);
+		System::String^ SelectVariation(void);
+
+
 
 
 		void setNom(System::String^);

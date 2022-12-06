@@ -50,6 +50,37 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerMontantClient(System:
 	sql = this->oMapp->MontantClient();
 	return this->oCad->getRows(sql, dataTableName);
 }
+System::Data::DataSet^ NS_Comp_Svc::CLservice::ValeurCommercial(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMapp->SelectValeurCommercial();
+	return this->oCad->getRows(sql, dataTableName);
+}
+System::Data::DataSet^ NS_Comp_Svc::CLservice::ValeurAchat(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMapp->SelectValeurAchat();
+	return this->oCad->getRows(sql, dataTableName);
+}
+
+System::Data::DataSet^ NS_Comp_Svc::CLservice::ChiffreAffaire(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMapp->SelectChiffreAffaire();
+	return this->oCad->getRows(sql, dataTableName);
+}
+System::Data::DataSet^ NS_Comp_Svc::CLservice::Variation(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMapp->SelectVariation();
+	return this->oCad->getRows(sql, dataTableName);
+}
+
+
 
 System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerToutCommande(System::String^ dataTableName)
 {

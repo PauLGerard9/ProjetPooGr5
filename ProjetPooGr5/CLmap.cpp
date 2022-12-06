@@ -39,6 +39,25 @@ System::String^ NS_Comp_Mappage::CLmap::MontantClient(void)
 {
 	return "select num_client, SUM(Montant) from Commande FULL JOIN Paiements ON Paiements.Référence_commande = Commande.Référence_commande GROUP BY num_client";
 }
+System::String^ NS_Comp_Mappage::CLmap::SelectValeurCommercial(void)
+{
+	return "SELECT SUM(Prix_HT*Quantité_en_stock*Taxes.Taux_TVA) FROM Article LEFT JOIN Taxes ON Article.Id_TVA = Taxes.Id_TVA";
+}
+
+System::String^ NS_Comp_Mappage::CLmap::SelectValeurAchat(void)
+{
+	return "SELECT SUM(Prix_HT*Quantité_en_stock) FROM Article ";
+}
+
+System::String^ NS_Comp_Mappage::CLmap::SelectChiffreAffaire(void)
+{
+	return "SELECT SUM(Montant) as 'Chiffre d''affaire sur un mois précis' FROM Paiements LEFT JOIN Date_ ON Paiements.Id_date_paiement = Date_.id_date WHERE MONTH(Date_.Date_) = 11 AND YEAR(Date_.Date_) = 2011; ";
+}
+System::String^ NS_Comp_Mappage::CLmap::SelectVariation(void)
+{
+	return "SELECT SUM(Montant) as 'Chiffre d''affaire sur un mois précis' FROM Paiements LEFT JOIN Date_ ON Paiements.Id_date_paiement = Date_.id_date WHERE MONTH(Date_.Date_) = 11 AND YEAR(Date_.Date_) = 2011; ";
+}
+
 
 
 
@@ -46,6 +65,7 @@ System::String^ NS_Comp_Mappage::CLmap::Insert_humain(void)
 {
 	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "');INSERT INTO DATE_ (date_) VALUES ('" + this->id_date_naissance + "'),('" + this->id_date_premiere_commande + "');INSERT INTO Client ([Id_date_naissance],[Id_date_premiere_commande],[ID_adresses_facturation], [id_humain],[ID_adresses_livraison]) VALUES((SELECT TOP 1 percent id_date FROM date_ WHERE date_ = '" + this->id_date_naissance + "'),(SELECT TOP 1 percent id_date FROM date_ WHERE date_ = '" + this->id_date_premiere_commande + "'),'" + this->id_adresse_facturation + "', (SELECT TOP 1 percent id_humain FROM humain WHERE nom = '" + this->nom + "' and prenom = '" + this->prenom + "'),'" + this->id_adresses_livraison + "');";
 }
+
 
 
 

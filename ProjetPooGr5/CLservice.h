@@ -21,6 +21,12 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ seuilReapro(System::String^);
 		System::Data::DataSet^ ArticlePlusVendu(System::String^);
 		System::Data::DataSet^ ArticleMoinsVendu(System::String^);
+		System::Data::DataSet^ ValeurCommercial(System::String^);
+		System::Data::DataSet^ ValeurAchat(System::String^);
+		System::Data::DataSet^ ChiffreAffaire(System::String^);
+		System::Data::DataSet^ Variation(System::String^);
+
+
 		void supprimerUnclient(System::String^ id_client);
 
 	};

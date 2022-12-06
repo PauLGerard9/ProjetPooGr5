@@ -52,6 +52,7 @@ namespace ProjetPooGr5 {
 
 
 
+
 	protected:
 
 	private:
@@ -119,8 +120,9 @@ namespace ProjetPooGr5 {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(144, 28);
 			this->button2->TabIndex = 51;
-			this->button2->Text = L"afficher commande";
+			this->button2->Text = L"Valeur Commercial";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &FormStatistique::button2_Click);
 			// 
 			// button4
 			// 
@@ -173,8 +175,9 @@ namespace ProjetPooGr5 {
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(144, 28);
 			this->button8->TabIndex = 56;
-			this->button8->Text = L"afficher commande";
+			this->button8->Text = L"derniere requete";
 			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &FormStatistique::button8_Click);
 			// 
 			// button9
 			// 
@@ -183,8 +186,9 @@ namespace ProjetPooGr5 {
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(144, 28);
 			this->button9->TabIndex = 57;
-			this->button9->Text = L"afficher commande";
+			this->button9->Text = L"Valeur Achat";
 			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &FormStatistique::button9_Click);
 			// 
 			// button10
 			// 
@@ -193,8 +197,9 @@ namespace ProjetPooGr5 {
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(144, 28);
 			this->button10->TabIndex = 58;
-			this->button10->Text = L"afficher commande";
+			this->button10->Text = L"CA par mois";
 			this->button10->UseVisualStyleBackColor = true;
+			this->button10->Click += gcnew System::EventHandler(this, &FormStatistique::button10_Click);
 			// 
 			// FormStatistique
 			// 
@@ -214,6 +219,7 @@ namespace ProjetPooGr5 {
 			this->Controls->Add(this->button1);
 			this->Name = L"FormStatistique";
 			this->Text = L"FormStatistique";
+			this->Load += gcnew System::EventHandler(this, &FormStatistique::FormStatistique_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 
@@ -258,6 +264,39 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	this->oDs = this->oSvc->selectionnerMontantClient("Rsl");
 	this->dataGridView1->DataSource = this->oDs;
 	this->dataGridView1->DataMember = "Rsl";
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oDs = this->oSvc->ValeurCommercial("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
+}
+private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oDs = this->oSvc->ValeurAchat("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
+}
+
+private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oDs = this->oSvc->ChiffreAffaire("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
+}
+private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oDs = this->oSvc->Variation("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
+}
+private: System::Void FormStatistique_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
