@@ -57,7 +57,7 @@ System::String^ NS_Comp_Mappage::CLmap::SelectValeurAchat(void)
 
 System::String^ NS_Comp_Mappage::CLmap::SelectChiffreAffaire(void)
 {
-	return "SELECT SUM(Montant) as 'Chiffre d''affaire sur un mois précis' FROM Paiements LEFT JOIN Date_ ON Paiements.Id_date_paiement = Date_.id_date WHERE MONTH(Date_.Date_) = 11 AND YEAR(Date_.Date_) = 2011; ";
+	return "SELECT SUM(Montant) as 'Chiffre d''affaire sur un mois précis' FROM Paiements LEFT JOIN Date_ ON Paiements.Id_date_paiement = Date_.id_date WHERE MONTH(Date_.Date_) = '" + this->id_client + "' AND YEAR(Date_.Date_) = 2011; ";
 }
 System::String^ NS_Comp_Mappage::CLmap::SelectVariation(void)
 {

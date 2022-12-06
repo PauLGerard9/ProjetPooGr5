@@ -74,13 +74,22 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::ValeurAchat(System::String^ dataT
 	return this->oCad->getRows(sql, dataTableName);
 }
 
-System::Data::DataSet^ NS_Comp_Svc::CLservice::ChiffreAffaire(System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::CLservice::ChiffreAffaire(System::String^ dataTableName, System::String^ id_client)
 {
+	
 	System::String^ sql;
 
+	this->oMapp->setid_client(id_client);
+
 	sql = this->oMapp->SelectChiffreAffaire();
+
+	this->oCad->actionRows(sql);
 	return this->oCad->getRows(sql, dataTableName);
+
+	
 }
+
+
 System::Data::DataSet^ NS_Comp_Svc::CLservice::Variation(System::String^ dataTableName)
 {
 	System::String^ sql;

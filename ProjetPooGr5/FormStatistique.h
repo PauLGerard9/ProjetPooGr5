@@ -47,6 +47,8 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Button^ button8;
 	private: System::Windows::Forms::Button^ button9;
 	private: System::Windows::Forms::Button^ button10;
+	private: System::Windows::Forms::TextBox^ id_client;
+
 
 
 
@@ -79,6 +81,7 @@ namespace ProjetPooGr5 {
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->button10 = (gcnew System::Windows::Forms::Button());
+			this->id_client = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -201,11 +204,20 @@ namespace ProjetPooGr5 {
 			this->button10->UseVisualStyleBackColor = true;
 			this->button10->Click += gcnew System::EventHandler(this, &FormStatistique::button10_Click);
 			// 
+			// id_client
+			// 
+			this->id_client->Location = System::Drawing::Point(994, 344);
+			this->id_client->Name = L"id_client";
+			this->id_client->Size = System::Drawing::Size(100, 22);
+			this->id_client->TabIndex = 59;
+			this->id_client->Text = L"Mois";
+			// 
 			// FormStatistique
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1176, 533);
+			this->Controls->Add(this->id_client);
 			this->Controls->Add(this->button10);
 			this->Controls->Add(this->button9);
 			this->Controls->Add(this->button8);
@@ -222,6 +234,7 @@ namespace ProjetPooGr5 {
 			this->Load += gcnew System::EventHandler(this, &FormStatistique::FormStatistique_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -283,11 +296,16 @@ private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->dataGridView1->Refresh();
 	this->oSvc = gcnew NS_Comp_Svc::CLservice();
-	this->oDs = this->oSvc->ChiffreAffaire("Rsl");
+	this->oDs = this->oSvc->ChiffreAffaire("Rsl",this->id_client->Text);
 	this->dataGridView1->DataSource = this->oDs;
 	this->dataGridView1->DataMember = "Rsl";
 }
 private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oSvc->ChiffreAffaire("Rsl",this->id_client->Text);
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
 }
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->dataGridView1->Refresh();
