@@ -60,6 +60,16 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::TextBox^ id_client;
 	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::TextBox^ txt_colonne_a_changer;
+
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::TextBox^ txt_nouvel_valeur;
+	private: System::Windows::Forms::Button^ afficher_table_personnel;
+
 
 
 	protected:
@@ -98,6 +108,14 @@ namespace ProjetPooGr5 {
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->id_client = (gcnew System::Windows::Forms::TextBox());
 			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->txt_colonne_a_changer = (gcnew System::Windows::Forms::TextBox());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->txt_nouvel_valeur = (gcnew System::Windows::Forms::TextBox());
+			this->afficher_table_personnel = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -217,11 +235,10 @@ namespace ProjetPooGr5 {
 			this->button1->Text = L"Inserer personnel";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &FormPersonnel::button1_Click);
-
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(711, 188);
+			this->button2->Location = System::Drawing::Point(776, 175);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(108, 23);
 			this->button2->TabIndex = 18;
@@ -241,7 +258,7 @@ namespace ProjetPooGr5 {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(415, 249);
+			this->label8->Location = System::Drawing::Point(355, 205);
 			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(65, 13);
@@ -250,7 +267,7 @@ namespace ProjetPooGr5 {
 			// 
 			// id_client
 			// 
-			this->id_client->Location = System::Drawing::Point(415, 269);
+			this->id_client->Location = System::Drawing::Point(358, 222);
 			this->id_client->Margin = System::Windows::Forms::Padding(4);
 			this->id_client->Name = L"id_client";
 			this->id_client->Size = System::Drawing::Size(167, 20);
@@ -258,7 +275,7 @@ namespace ProjetPooGr5 {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(419, 217);
+			this->button4->Location = System::Drawing::Point(358, 173);
 			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(168, 28);
@@ -266,11 +283,93 @@ namespace ProjetPooGr5 {
 			this->button4->Text = L"supprimer Personnel";
 			this->button4->UseVisualStyleBackColor = true;
 			// 
+			// button5
+			// 
+			this->button5->Location = System::Drawing::Point(576, 175);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(75, 23);
+			this->button5->TabIndex = 36;
+			this->button5->Text = L"modifier personnel";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &FormPersonnel::button5_Click);
+
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(573, 201);
+			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(65, 13);
+			this->label9->TabIndex = 37;
+			this->label9->Text = L"id Personnel";
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(576, 218);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(167, 20);
+			this->textBox1->TabIndex = 38;
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(573, 240);
+			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(97, 13);
+			this->label10->TabIndex = 39;
+			this->label10->Text = L"Colonne a changer";
+			// 
+			// txt_colonne_a_changer
+			// 
+			this->txt_colonne_a_changer->Location = System::Drawing::Point(576, 257);
+			this->txt_colonne_a_changer->Margin = System::Windows::Forms::Padding(4);
+			this->txt_colonne_a_changer->Name = L"txt_colonne_a_changer";
+			this->txt_colonne_a_changer->Size = System::Drawing::Size(167, 20);
+			this->txt_colonne_a_changer->TabIndex = 40;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(573, 281);
+			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(71, 13);
+			this->label11->TabIndex = 41;
+			this->label11->Text = L"nouvel valeur";
+			// 
+			// txt_nouvel_valeur
+			// 
+			this->txt_nouvel_valeur->Location = System::Drawing::Point(576, 298);
+			this->txt_nouvel_valeur->Margin = System::Windows::Forms::Padding(4);
+			this->txt_nouvel_valeur->Name = L"txt_nouvel_valeur";
+			this->txt_nouvel_valeur->Size = System::Drawing::Size(167, 20);
+			this->txt_nouvel_valeur->TabIndex = 42;
+			// 
+			// afficher_table_personnel
+			// 
+			this->afficher_table_personnel->Location = System::Drawing::Point(776, 205);
+			this->afficher_table_personnel->Name = L"afficher_table_personnel";
+			this->afficher_table_personnel->Size = System::Drawing::Size(139, 23);
+			this->afficher_table_personnel->TabIndex = 43;
+			this->afficher_table_personnel->Text = L"afficher_table_personnel";
+			this->afficher_table_personnel->UseVisualStyleBackColor = true;
+			// 
 			// FormPersonnel
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(956, 445);
+			this->Controls->Add(this->afficher_table_personnel);
+			this->Controls->Add(this->txt_nouvel_valeur);
+			this->Controls->Add(this->label11);
+			this->Controls->Add(this->txt_colonne_a_changer);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->button5);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->id_client);
 			this->Controls->Add(this->button4);
