@@ -31,7 +31,7 @@ namespace NS_Comp_Svc
 		void ajouterUnstock(System::String^ txt_ref_article, System::String^ txt_nom_article, System::String^ txt_prix_ht, System::String^ quantite,System::String^ txt_seuil_reapro, System::String^ txt_id_tva);
 		void ajouterUneCommande(System::String^ txt_ref_commande, System::String^ txt_id_remise, System::String^ txt_Id_date_commande, System::String^ txt_id_date_livraison, System::String^ txt_id_date_paiement_final, System::String^ txt_num_client);
 
-		int returnIdMaxDate();
+		
 		
 		void supprimerUnclient(System::String^ id_client);
 		void supprimerUnPersonnel(System::String^ id_client);
@@ -41,6 +41,7 @@ namespace NS_Comp_Svc
 		void modifierUnclient(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
 		void modifierUnpersonnel(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
 		void modifierUnstock(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
+		void modifierUneCommande(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
 
 		
 	};
