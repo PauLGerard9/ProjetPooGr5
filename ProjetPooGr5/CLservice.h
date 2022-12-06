@@ -13,7 +13,7 @@ namespace NS_Comp_Svc
 		CLservice(void);
 		System::Data::DataSet^ selectionnerToutesLesPersonnes(System::String^);
 		void ajouterUnclient(System::String^ nom, System::String^ prenom, System::String^ Id_date_premiere_commande, System::String^ id_adresse_facturation, System::String^ id_date_naissance, System::String^ id_adresses_livraison);
-		System::Data::DataSet^ selectionnerMontantClient(System::String^);
+		System::Data::DataSet^ selectionnerMontantClient(System::String^, System::String^ id_client);
 		System::Data::DataSet^ selectionnerTousLeStock(System::String^);
 		System::Data::DataSet^ selectionnerTousLePersonnel(System::String^);
 		System::Data::DataSet^ selectionnerToutCommande(System::String^);

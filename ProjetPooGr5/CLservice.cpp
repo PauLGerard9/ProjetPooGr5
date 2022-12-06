@@ -52,12 +52,13 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerTousLeStock(System::S
 	sql = this->oMapp->SelectStock();
 	return this->oCad->getRows(sql, dataTableName);
 }
-System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerMontantClient(System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerMontantClient(System::String^ dataTableName, System::String^ id_client)
 {
 	System::String^ sql;
-
+	this->oMapp->setid_client(id_client);
 	sql = this->oMapp->MontantClient();
 	return this->oCad->getRows(sql, dataTableName);
+
 }
 System::Data::DataSet^ NS_Comp_Svc::CLservice::ValeurCommercial(System::String^ dataTableName)
 {

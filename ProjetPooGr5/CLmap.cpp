@@ -34,16 +34,16 @@ System::String^ NS_Comp_Mappage::CLmap::SelectReapro(void)
 }
 System::String^ NS_Comp_Mappage::CLmap::PlusVendu(void)
 {
-	return "SELECT Quantité, Référence_article FROM Articles_commandés ORDER BY Quantité DESC; ";
+	return "SELECT TOP 10 Quantité, Référence_article FROM Articles_commandés ORDER BY Quantité DESC";
 }
 System::String^ NS_Comp_Mappage::CLmap::SelectMoinsVendu(void)
 {
-	return "SELECT Quantité, Référence_article FROM Articles_commandés ORDER BY Quantité ASC; ";
+	return "SELECT TOP 10 Quantité, Référence_article FROM Articles_commandés ORDER BY Quantité ASC";
 }
 
 System::String^ NS_Comp_Mappage::CLmap::MontantClient(void)
 {
-	return "select num_client, SUM(Montant) from Commande FULL JOIN Paiements ON Paiements.Référence_commande = Commande.Référence_commande GROUP BY num_client";
+	return "SELECT SUM(Montant) as 'Chiffre d''affaire sur un mois précis' FROM Paiements LEFT JOIN Date_ ON Paiements.Id_date_paiement = Date_.id_date WHERE MONTH(Date_.Date_) = '" + this->id_client + "' AND YEAR(Date_.Date_) = 2011; ";
 }
 System::String^ NS_Comp_Mappage::CLmap::SelectValeurCommercial(void)
 {
@@ -61,7 +61,7 @@ System::String^ NS_Comp_Mappage::CLmap::SelectChiffreAffaire(void)
 }
 System::String^ NS_Comp_Mappage::CLmap::SelectVariation(void)
 {
-	return "SELECT SUM(Montant) as 'Chiffre d''affaire sur un mois précis' FROM Paiements LEFT JOIN Date_ ON Paiements.Id_date_paiement = Date_.id_date WHERE MONTH(Date_.Date_) = 11 AND YEAR(Date_.Date_) = 2011; ";
+	return "SELECT TVA1, (0.20*TVA1) AS TVA2, (TVA1*(0.20*TVA1)) AS TVA3 FROM (SELECT SUM(Quantité_en_stock * (achat + marge - remise - demarqueInconnue)) AS TVA1 FROM (SELECT Référence_article, Nom_article, Prix_HT, (Prix_HT - (0.10 * Prix_HT)) AS achat, (0.10 * (Prix_HT - (0.10 * Prix_HT))) AS marge, (0.1 * (Prix_HT - (0.10 * Prix_HT))) AS remise, Taux_TVA, Quantité_en_stock, demarqueInconnue FROM Article INNER JOIN Taxes ON Article.Id_TVA = Taxes.Id_TVA, (SELECT(0.01 * (SUM(Montant))) AS demarqueInconnue FROM Paiements) AS demarqueInconnue) AS stock) AS TVA1";
 }
 
 
