@@ -120,6 +120,10 @@ System::String^ NS_Comp_Mappage::CLmap::Update_article(void)
 {
 	return "UPDATE article SET " + this->colonne_a_changer + " = '" + this->nouvel_valeur + "' WHERE Référence_article = '" + this->id_client + "'; ";
 }
+System::String^ NS_Comp_Mappage::CLmap::Update_commande(void)
+{
+	return "UPDATE commande SET " + this->colonne_a_changer + " = '" + this->nouvel_valeur + "' WHERE Référence_commande = '" + this->id_client + "'; ";
+}
 
 void NS_Comp_Mappage::CLmap::setid_client(System::String^ id_client){this->id_client = id_client;}
 void NS_Comp_Mappage::CLmap::setNom(System::String^ nom){this->nom = nom;}

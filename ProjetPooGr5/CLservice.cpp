@@ -269,6 +269,18 @@ void NS_Comp_Svc::CLservice::modifierUnstock(System::String^ id_client, System::
 
 	this->oCad->actionRows(sql);
 }
+void NS_Comp_Svc::CLservice::modifierUneCommande(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur)
+{
+	System::String^ sql;
+
+	this->oMapp->setid_client(id_client);
+	this->oMapp->set_colonne_a_changer(txt_colonne_a_changer);
+	this->oMapp->set_txt_nouvel_valeur(txt_nouvel_valeur);
+
+	sql = this->oMapp->Update_commande();
+
+	this->oCad->actionRows(sql);
+}
 
 
 

@@ -297,6 +297,8 @@ namespace ProjetPooGr5 {
 			this->button5->TabIndex = 52;
 			this->button5->Text = L"modifier Commande";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &FormCommande::button5_Click);
+
 			// 
 			// button6
 			// 
@@ -416,7 +418,13 @@ namespace ProjetPooGr5 {
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc = gcnew NS_Comp_Svc::CLservice();
 	this->oSvc->supprimerUneCommande(this->id_client->Text);
+
 }
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+   this->oSvc = gcnew NS_Comp_Svc::CLservice();
+   this->oSvc->modifierUneCommande(this->txt_mod_ref_commande->Text, this->txt_colonne_a_modifier->Text, this->txt_nouvel_valeur->Text);
+	   }
+
 private: System::Void id_client_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 
