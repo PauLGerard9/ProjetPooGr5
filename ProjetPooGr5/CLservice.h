@@ -16,7 +16,7 @@ namespace NS_Comp_Svc
 		
 		System::Data::DataSet^ selectionnerTousLeStock(System::String^);
 		System::Data::DataSet^ selectionnerTousLePersonnel(System::String^);
-	
+		System::Data::DataSet^ selectionnerToutCommande(System::String^);
 		void supprimerUnclient(System::String^ id_client);
 
 	};

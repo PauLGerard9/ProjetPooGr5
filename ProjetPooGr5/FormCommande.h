@@ -1,5 +1,5 @@
 #pragma once
-
+#include "CLservice.h"
 namespace ProjetPooGr5 {
 
 	using namespace System;
@@ -34,6 +34,9 @@ namespace ProjetPooGr5 {
 				delete components;
 			}
 		}
+
+	private: NS_Comp_Svc::CLservice^ oSvc;
+	private: System::Data::DataSet^ oDs;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::TextBox^ txt_id_adresses_livraison;
 	private: System::Windows::Forms::Label^ label7;
@@ -232,6 +235,7 @@ namespace ProjetPooGr5 {
 			this->button3->TabIndex = 34;
 			this->button3->Text = L"afficher commande";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &FormCommande::button3_Click);
 			// 
 			// dataGridView1
 			// 
@@ -276,5 +280,12 @@ namespace ProjetPooGr5 {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
-	};
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->dataGridView1->Refresh();
+		this->oSvc = gcnew NS_Comp_Svc::CLservice();
+		this->oDs = this->oSvc->selectionnerToutCommande("Rsl");
+		this->dataGridView1->DataSource = this->oDs;
+		this->dataGridView1->DataMember = "Rsl";
+	}
+};
 }
