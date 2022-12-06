@@ -28,6 +28,7 @@ namespace NS_Comp_Svc
 
 
 		void supprimerUnclient(System::String^ id_client);
+		void supprimerUnPersonnel(System::String^ id_client);
 
 	};
 }

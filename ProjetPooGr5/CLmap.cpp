@@ -74,6 +74,10 @@ System::String^ NS_Comp_Mappage::CLmap::Delete_client(void)
 {
 	return "DELETE FROM Client WHERE num_client = '"+ this->id_client +"';";
 }
+System::String^ NS_Comp_Mappage::CLmap::Delete_personnel(void)
+{
+	return "DELETE FROM Personnel WHERE ID_personnel = '" + this->id_client + "';";
+}
 // DELETE FROM humain WHERE id_humain = (SELECT TOP 1 percent id_humain FROM client WHERE num_client = '"+ this->id_client +"');DELETE FROM humain WHERE id_adresses = (SELECT TOP 1 percent ID_adresses_facturation FROM client WHERE num_client = '" + this->id_client + "');DELETE FROM humain WHERE id_adresses = (SELECT TOP 1 percent ID_adresses_livraison FROM client WHERE num_client = '" + this->id_client + "');"
 System::String^ NS_Comp_Mappage::CLmap::Update(void)
 {
