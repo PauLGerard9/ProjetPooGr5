@@ -129,8 +129,9 @@ namespace ProjetPooGr5 {
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(144, 28);
 			this->button4->TabIndex = 52;
-			this->button4->Text = L"afficher commande";
+			this->button4->Text = L"Montant Client";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &FormStatistique::button4_Click);
 			// 
 			// button5
 			// 
@@ -139,8 +140,9 @@ namespace ProjetPooGr5 {
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(144, 28);
 			this->button5->TabIndex = 53;
-			this->button5->Text = L"afficher commande";
+			this->button5->Text = L"Moins Vendu";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &FormStatistique::button5_Click);
 			// 
 			// button6
 			// 
@@ -240,6 +242,20 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	this->dataGridView1->Refresh();
 	this->oSvc = gcnew NS_Comp_Svc::CLservice();
 	this->oDs = this->oSvc->ArticlePlusVendu("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oDs = this->oSvc->ArticleMoinsVendu("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oDs = this->oSvc->selectionnerMontantClient("Rsl");
 	this->dataGridView1->DataSource = this->oDs;
 	this->dataGridView1->DataMember = "Rsl";
 }

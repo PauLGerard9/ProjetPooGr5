@@ -30,6 +30,17 @@ System::String^ NS_Comp_Mappage::CLmap::PlusVendu(void)
 {
 	return "SELECT Quantité, Référence_article FROM Articles_commandés ORDER BY Quantité DESC; ";
 }
+System::String^ NS_Comp_Mappage::CLmap::SelectMoinsVendu(void)
+{
+	return "SELECT Quantité, Référence_article FROM Articles_commandés ORDER BY Quantité ASC; ";
+}
+
+System::String^ NS_Comp_Mappage::CLmap::MontantClient(void)
+{
+	return "select num_client, SUM(Montant) from Commande FULL JOIN Paiements ON Paiements.Référence_commande = Commande.Référence_commande GROUP BY num_client";
+}
+
+
 
 System::String^ NS_Comp_Mappage::CLmap::Insert_humain(void)
 {

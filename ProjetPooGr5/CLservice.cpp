@@ -28,11 +28,26 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::panierMoyen(System::String^ dataT
 	return this->oCad->getRows(sql, dataTableName);
 }
 
+System::Data::DataSet^ NS_Comp_Svc::CLservice::ArticleMoinsVendu(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMapp->SelectMoinsVendu();
+	return this->oCad->getRows(sql, dataTableName);
+}
+
 System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerTousLeStock(System::String^ dataTableName)
 {
 	System::String^ sql;
 
 	sql = this->oMapp->SelectStock();
+	return this->oCad->getRows(sql, dataTableName);
+}
+System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerMontantClient(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMapp->MontantClient();
 	return this->oCad->getRows(sql, dataTableName);
 }
 
