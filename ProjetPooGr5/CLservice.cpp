@@ -161,7 +161,12 @@ void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::Str
 		MessageBox::Show("Merci de ne pas mettre d'espace dans les textBox", "un ou plusieurs champs contenant des espaces", MessageBoxButtons::OK);
 		return;
 	}
-
+	
+	if (!(nom[0] >= 'A' && nom[0] <= 'Z') || !(prenom[0] >= 'A' && prenom[0] <= 'Z'))
+	{
+		MessageBox::Show("Attention, vos noms et prenoms doivent commencer par une majuscule", "Oubli de majuscule", MessageBoxButtons::OK);
+		return;
+	}
 
 	try
 	{
