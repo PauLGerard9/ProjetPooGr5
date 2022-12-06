@@ -64,10 +64,6 @@ System::String^ NS_Comp_Mappage::CLmap::SelectVariation(void)
 	return "SELECT TVA1, (0.20*TVA1) AS TVA2, (TVA1*(0.20*TVA1)) AS TVA3 FROM (SELECT SUM(Quantité_en_stock * (achat + marge - remise - demarqueInconnue)) AS TVA1 FROM (SELECT Référence_article, Nom_article, Prix_HT, (Prix_HT - (0.10 * Prix_HT)) AS achat, (0.10 * (Prix_HT - (0.10 * Prix_HT))) AS marge, (0.1 * (Prix_HT - (0.10 * Prix_HT))) AS remise, Taux_TVA, Quantité_en_stock, demarqueInconnue FROM Article INNER JOIN Taxes ON Article.Id_TVA = Taxes.Id_TVA, (SELECT(0.01 * (SUM(Montant))) AS demarqueInconnue FROM Paiements) AS demarqueInconnue) AS stock) AS TVA1";
 }
 
-System::String^ NS_Comp_Mappage::CLmap::VerifDadate(void)
-{
-	return "select count(id_date) from Personnel where Id_date = 6 ";
-}
 
 
 

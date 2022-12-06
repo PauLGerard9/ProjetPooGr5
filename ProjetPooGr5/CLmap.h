@@ -48,7 +48,7 @@ namespace NS_Comp_Mappage
 		System::String^ SelectValeurAchat(void);
 		System::String^ SelectChiffreAffaire(void);
 		System::String^ SelectVariation(void);
-		System::String^ VerifDadate(void);
+		
 
 
 

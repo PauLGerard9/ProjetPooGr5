@@ -91,15 +91,9 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::ChiffreAffaire(System::String^ da
 	
 }
 
-System::Data::DataSet^ NS_Comp_Svc::CLservice::VerifDate(System::String^, System::String^ id_date) {
-	System::String^ sql;
-
-	this->oMapp->setid_client(id_date);
-
-	sql = this->oMapp->VerifDadate();
-
-	this->oCad->actionRows(sql);
-	return 
+int NS_Comp_Svc::CLservice::returnIdMaxDate()
+{
+	return 809;
 }
 
 
@@ -172,6 +166,7 @@ void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::Str
 		return;
 	}
 
+	int max_id_Date = returnIdMaxDate();
 
 
 
