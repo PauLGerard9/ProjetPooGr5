@@ -4,6 +4,12 @@ System::String^ NS_Comp_Mappage::CLmap::Select(void)
 {
 	return "SELECT num_client,Nom, prenom FROM client LEFT JOIN humain ON Client.Id_humain = Humain.Id_humain; ";
 }
+System::String^ NS_Comp_Mappage::CLmap::Selecttableclient(void)
+{
+	return "SELECT * FROM Client;";
+}
+
+
 System::String^ NS_Comp_Mappage::CLmap::SelectPersonnel(void)
 {
 	return "SELECT * FROM Humain INNER JOIN Personnel ON Humain.Id_humain = Personnel.Id_humain;";
@@ -86,9 +92,9 @@ System::String^ NS_Comp_Mappage::CLmap::Delete_stock(void)
 
 
 // DELETE FROM humain WHERE id_humain = (SELECT TOP 1 percent id_humain FROM client WHERE num_client = '"+ this->id_client +"');DELETE FROM humain WHERE id_adresses = (SELECT TOP 1 percent ID_adresses_facturation FROM client WHERE num_client = '" + this->id_client + "');DELETE FROM humain WHERE id_adresses = (SELECT TOP 1 percent ID_adresses_livraison FROM client WHERE num_client = '" + this->id_client + "');"
-System::String^ NS_Comp_Mappage::CLmap::Update(void)
+System::String^ NS_Comp_Mappage::CLmap::Update_client(void)
 {
-	return "";
+	return "UPDATE Client SET "+ this->colonne_a_changer+" = '"+ this->nouvel_valeur +"' WHERE num_client = '"+ this->id_client +"'; ";
 }
 void NS_Comp_Mappage::CLmap::setid_client(System::String^ id_client){this->id_client = id_client;}
 void NS_Comp_Mappage::CLmap::setNom(System::String^ nom){this->nom = nom;}
@@ -98,13 +104,18 @@ void NS_Comp_Mappage::CLmap::set_id_adresse_facturation(System::String^ id_adres
 void NS_Comp_Mappage::CLmap::set_id_date_naissance(System::String^ id_date_naissance){this->id_date_naissance = id_date_naissance;}
 void NS_Comp_Mappage::CLmap::set_id_adresses_livraison(System::String^ id_adresses_livraison){this->id_adresses_livraison = id_adresses_livraison;}
 void NS_Comp_Mappage::CLmap::set_id_humain(System::String^ id_humain) {this->id_humain = id_humain;}
+void NS_Comp_Mappage::CLmap::set_colonne_a_changer(System::String^ colonne_a_changer) { this->colonne_a_changer = colonne_a_changer; }
+void NS_Comp_Mappage::CLmap::set_txt_nouvel_valeur(System::String^ nouvel_valeur) { this->nouvel_valeur = nouvel_valeur; }
 
 
 System::String^ NS_Comp_Mappage::CLmap::getNom(void) { return this->nom; }
 System::String^ NS_Comp_Mappage::CLmap::getPrenom(void) { return this->prenom; }
+System::String^ NS_Comp_Mappage::CLmap::getid_client(void) { return this->id_client; }
 
 System::String^ NS_Comp_Mappage::CLmap::getid_date_naissance(void) { return this->id_date_naissance;}
 System::String^ NS_Comp_Mappage::CLmap::getid_date_premiere_commande(void) { return this->id_date_premiere_commande;}
 System::String^ NS_Comp_Mappage::CLmap::getid_adresse_facturation(void) { return this->id_adresse_facturation; }
 System::String^ NS_Comp_Mappage::CLmap::getid_adresses_livraison(void) { return this->id_adresses_livraison;}
 System::String^ NS_Comp_Mappage::CLmap::getid_humain(void) { return this->id_humain;}
+System::String^ NS_Comp_Mappage::CLmap::getcolonne_a_changer(void) { return this->colonne_a_changer; }
+System::String^ NS_Comp_Mappage::CLmap::gettxt_nouvel_valeur(void) { return this->nouvel_valeur; }

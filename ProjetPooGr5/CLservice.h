@@ -17,6 +17,7 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ selectionnerTousLeStock(System::String^);
 		System::Data::DataSet^ selectionnerTousLePersonnel(System::String^);
 		System::Data::DataSet^ selectionnerToutCommande(System::String^);
+		System::Data::DataSet^ selectionnertableclient(System::String^);
 		System::Data::DataSet^ panierMoyen(System::String^);
 		System::Data::DataSet^ seuilReapro(System::String^);
 		System::Data::DataSet^ ArticlePlusVendu(System::String^);
@@ -28,8 +29,16 @@ namespace NS_Comp_Svc
 
 
 		void supprimerUnclient(System::String^ id_client);
+<<<<<<< HEAD
 		void supprimerUnPersonnel(System::String^ id_client);
+<<<<<<< HEAD
 		void supprimerUnStock(System::String^ id_client);
+=======
+=======
+		void modifierUnclient(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
+>>>>>>> TEST42
+>>>>>>> TEST42
 
+		
 	};
 }

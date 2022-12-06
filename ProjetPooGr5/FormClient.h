@@ -339,6 +339,8 @@ namespace ProjetPooGr5 {
 			this->button5->TabIndex = 20;
 			this->button5->Text = L"modifier client";
 			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &FormClient::button5_Click);
+
 			// 
 			// label9
 			// 
@@ -404,6 +406,8 @@ namespace ProjetPooGr5 {
 			this->button6->TabIndex = 27;
 			this->button6->Text = L"afficher table client";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &FormClient::button6_Click);
+
 			// 
 			// FormClient
 			// 
@@ -468,6 +472,19 @@ namespace ProjetPooGr5 {
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->oSvc = gcnew NS_Comp_Svc::CLservice();
 		this->oSvc->supprimerUnclient(this->id_client->Text);
+	}
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservice();
+		this->oDs = this->oSvc->selectionnertableclient("Rsl");
+		this->dataGridView1->DataSource = this->oDs;
+		this->dataGridView1->DataMember = "Rsl";
+		
+	}
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservice();
+		this->oSvc->modifierUnclient(this->txt_id_client_mod->Text, this->txt_colonne_a_changer->Text, this->txt_nouvel_valeur->Text);
+
+
 	}
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }

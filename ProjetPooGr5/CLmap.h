@@ -15,8 +15,12 @@ namespace NS_Comp_Mappage
 		System::String^ id_date_naissance;
 		System::String^ id_adresses_livraison;
 		System::String^ id_humain;
+		System::String^ colonne_a_changer;
+		System::String^ nouvel_valeur;
+
 	public:
 		System::String^ Select(void);
+		System::String^ Selecttableclient(void);
 		System::String^ SelectPersonnel(void);
 		System::String^ SelectStock(void);
 		System::String^ SelectCommande(void);
@@ -24,6 +28,7 @@ namespace NS_Comp_Mappage
 		System::String^ SelectPanierMoyen(void);
 		System::String^ Insert_humain(void);
 		System::String^ Delete_client(void);
+<<<<<<< HEAD
 		System::String^ Delete_personnel(void);
 		System::String^ Delete_stock(void);
 		System::String^ Update(void);
@@ -37,6 +42,9 @@ namespace NS_Comp_Mappage
 
 
 
+=======
+		System::String^ Update_client(void);
+>>>>>>> TEST42
 
 		void setNom(System::String^);
 		void setPrenom(System::String^);
@@ -46,6 +54,8 @@ namespace NS_Comp_Mappage
 		void set_id_adresses_livraison(System::String^ id_adresses_livraison);
 		void set_id_humain(System::String^ Id_humain);
 		void setid_client(System::String^ id_client);
+		void set_colonne_a_changer(System::String^ id_humain);
+		void set_txt_nouvel_valeur(System::String^ id_humain);
 		
 		System::String^ getNom(void);
 		System::String^ getPrenom(void);
@@ -54,7 +64,10 @@ namespace NS_Comp_Mappage
 		System::String^ getid_date_naissance(void);
 		System::String^ getid_adresses_livraison(void);
 		System::String^ getid_humain(void);
-		
+		System::String^ getcolonne_a_changer(void);
+		System::String^ gettxt_nouvel_valeur(void);
+		System::String^ getid_client(void);
+
 	};
 }
 
