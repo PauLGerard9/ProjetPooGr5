@@ -128,6 +128,21 @@ void NS_Comp_Svc::CLservice::ajouterUnclient(System::String^ nom, System::String
 	this->oCad->actionRows(sql);
 }
 
+void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::String^ prenom, System::String^ txt_Id_date_embauche, System::String^ txt_id_supérieur, System::String^ txt_id_adresse)
+{
+	System::String^ sql;
+
+	this->oMapp->setNom(nom);
+	this->oMapp->setPrenom(prenom);
+	this->oMapp->set_txt_Id_date_embauche(txt_Id_date_embauche);
+	this->oMapp->set_txt_id_supérieur(txt_id_supérieur);
+	this->oMapp->set_txt_id_adresse(txt_id_adresse);
+	
+	sql = this->oMapp->Insert_personnel();
+
+	this->oCad->actionRows(sql);
+}
+
 void NS_Comp_Svc::CLservice::supprimerUnclient(System::String^ id_client)
 {
 	System::String^ sql;

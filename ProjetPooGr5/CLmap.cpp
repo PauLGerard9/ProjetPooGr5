@@ -72,7 +72,10 @@ System::String^ NS_Comp_Mappage::CLmap::Insert_humain(void)
 	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "');INSERT INTO DATE_ (date_) VALUES ('" + this->id_date_naissance + "'),('" + this->id_date_premiere_commande + "');INSERT INTO Client ([Id_date_naissance],[Id_date_premiere_commande],[ID_adresses_facturation], [id_humain],[ID_adresses_livraison]) VALUES((SELECT TOP 1 percent id_date FROM date_ WHERE date_ = '" + this->id_date_naissance + "'),(SELECT TOP 1 percent id_date FROM date_ WHERE date_ = '" + this->id_date_premiere_commande + "'),'" + this->id_adresse_facturation + "', (SELECT TOP 1 percent id_humain FROM humain WHERE nom = '" + this->nom + "' and prenom = '" + this->prenom + "'),'" + this->id_adresses_livraison + "');";
 }
 
-
+System::String^ NS_Comp_Mappage::CLmap::Insert_personnel(void)
+{
+	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "'); INSERT INTO Personnel( Id_date, ID_superieur, ID_adresses,ID_humain) VALUES( '" + this->txt_Id_date_embauche + "', '" + this->txt_id_supérieur + "', '" + this->txt_id_adresse + "', (SELECT TOP 1 percent id_humain FROM humain WHERE nom = '" + this->nom + "' and prenom = '" + this->prenom + "')); ";
+}
 
 
 
@@ -113,6 +116,10 @@ void NS_Comp_Mappage::CLmap::set_id_humain(System::String^ id_humain) {this->id_
 void NS_Comp_Mappage::CLmap::set_colonne_a_changer(System::String^ colonne_a_changer) { this->colonne_a_changer = colonne_a_changer; }
 void NS_Comp_Mappage::CLmap::set_txt_nouvel_valeur(System::String^ nouvel_valeur) { this->nouvel_valeur = nouvel_valeur; }
 
+void NS_Comp_Mappage::CLmap::set_txt_Id_date_embauche(System::String^ txt_Id_date_embauche) { this->txt_Id_date_embauche = txt_Id_date_embauche; }
+void NS_Comp_Mappage::CLmap::set_txt_id_supérieur(System::String^ txt_id_supérieur) { this->txt_id_supérieur = txt_id_supérieur; }
+void NS_Comp_Mappage::CLmap::set_txt_id_adresse(System::String^ txt_id_adresse) { this->txt_id_adresse = txt_id_adresse; }
+
 
 System::String^ NS_Comp_Mappage::CLmap::getNom(void) { return this->nom; }
 System::String^ NS_Comp_Mappage::CLmap::getPrenom(void) { return this->prenom; }
@@ -125,3 +132,7 @@ System::String^ NS_Comp_Mappage::CLmap::getid_adresses_livraison(void) { return 
 System::String^ NS_Comp_Mappage::CLmap::getid_humain(void) { return this->id_humain;}
 System::String^ NS_Comp_Mappage::CLmap::getcolonne_a_changer(void) { return this->colonne_a_changer; }
 System::String^ NS_Comp_Mappage::CLmap::gettxt_nouvel_valeur(void) { return this->nouvel_valeur; }
+
+System::String^ NS_Comp_Mappage::CLmap::get_txt_Id_date_embauche(void) { return this->txt_Id_date_embauche; }
+System::String^ NS_Comp_Mappage::CLmap::get_txt_id_supérieur(void) { return this->txt_id_supérieur; }
+System::String^ NS_Comp_Mappage::CLmap::get_txt_id_adresse(void) { return this->txt_id_adresse; }

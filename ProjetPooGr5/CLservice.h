@@ -27,6 +27,7 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ ChiffreAffaire(System::String^);
 		System::Data::DataSet^ Variation(System::String^);
 
+		void ajouterUnpersonnel(System::String^ nom, System::String^ prenom, System::String^ txt_Id_date_embauche, System::String^ txt_id_supérieur, System::String^ txt_id_adresse);
 
 		void supprimerUnclient(System::String^ id_client);
 

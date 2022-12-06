@@ -18,6 +18,10 @@ namespace NS_Comp_Mappage
 		System::String^ colonne_a_changer;
 		System::String^ nouvel_valeur;
 
+		System::String^ txt_Id_date_embauche;
+		System::String^ txt_id_supérieur;
+		System::String^ txt_id_adresse;
+
 	public:
 		System::String^ Select(void);
 		System::String^ Selecttableclient(void);
@@ -27,6 +31,9 @@ namespace NS_Comp_Mappage
 		System::String^ SelectReapro(void);
 		System::String^ SelectPanierMoyen(void);
 		System::String^ Insert_humain(void);
+		System::String^ Insert_personnel(void);
+
+
 		System::String^ Delete_client(void);
 		System::String^ Delete_commande(void);
 		System::String^ Delete_personnel(void);
@@ -57,6 +64,12 @@ namespace NS_Comp_Mappage
 		void set_colonne_a_changer(System::String^ id_humain);
 		void set_txt_nouvel_valeur(System::String^ id_humain);
 		
+		void set_txt_Id_date_embauche(System::String^ txt_Id_date_embauche);
+		void set_txt_id_supérieur(System::String^ txt_id_supérieur);
+		void set_txt_id_adresse(System::String^ txt_id_adresse);
+
+
+
 		System::String^ getNom(void);
 		System::String^ getPrenom(void);
 		System::String^ getid_date_premiere_commande(void);
@@ -67,6 +80,10 @@ namespace NS_Comp_Mappage
 		System::String^ getcolonne_a_changer(void);
 		System::String^ gettxt_nouvel_valeur(void);
 		System::String^ getid_client(void);
+
+		System::String^ NS_Comp_Mappage::CLmap::get_txt_Id_date_embauche(void);
+		System::String^ NS_Comp_Mappage::CLmap::get_txt_id_supérieur(void);
+		System::String^ NS_Comp_Mappage::CLmap::get_txt_id_adresse(void);
 
 	};
 }

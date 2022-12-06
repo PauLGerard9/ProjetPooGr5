@@ -38,14 +38,15 @@ namespace ProjetPooGr5 {
 	private: NS_Comp_Svc::CLservice^ oSvc;
 	private: System::Data::DataSet^ oDs;
 	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::TextBox^ txt_id_adresses_livraison;
+
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::TextBox^ txt_id_supérieur;
+	private: System::Windows::Forms::TextBox^ txt_id_adresse;
 
-	private: System::Windows::Forms::TextBox^ txt_id_adresse_facturation;
+
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::TextBox^ txt_Id_date_embauche;
 
@@ -79,13 +80,12 @@ namespace ProjetPooGr5 {
 		void InitializeComponent(void)
 		{
 			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->txt_id_adresses_livraison = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->txt_id_supérieur = (gcnew System::Windows::Forms::TextBox());
-			this->txt_id_adresse_facturation = (gcnew System::Windows::Forms::TextBox());
+			this->txt_id_adresse = (gcnew System::Windows::Forms::TextBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->txt_Id_date_embauche = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -104,20 +104,13 @@ namespace ProjetPooGr5 {
 			// button3
 			// 
 			this->button3->Location = System::Drawing::Point(828, 396);
-			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(56, 19);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"retour";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &FormPersonnel::button3_Click);
-			// 
-			// txt_id_adresses_livraison
-			// 
-			this->txt_id_adresses_livraison->Location = System::Drawing::Point(82, 413);
-			this->txt_id_adresses_livraison->Name = L"txt_id_adresses_livraison";
-			this->txt_id_adresses_livraison->Size = System::Drawing::Size(179, 20);
-			this->txt_id_adresses_livraison->TabIndex = 32;
 			// 
 			// label7
 			// 
@@ -132,9 +125,8 @@ namespace ProjetPooGr5 {
 			this->label6->AutoSize = true;
 			this->label6->Location = System::Drawing::Point(80, 396);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(110, 13);
+			this->label6->Size = System::Drawing::Size(0, 13);
 			this->label6->TabIndex = 30;
-			this->label6->Text = L"ID_adresses_livraison";
 			// 
 			// label5
 			// 
@@ -150,9 +142,9 @@ namespace ProjetPooGr5 {
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(80, 358);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(122, 13);
+			this->label4->Size = System::Drawing::Size(66, 13);
 			this->label4->TabIndex = 28;
-			this->label4->Text = L"ID_adresses_facturation";
+			this->label4->Text = L"ID_adresses";
 			// 
 			// txt_id_supérieur
 			// 
@@ -161,12 +153,12 @@ namespace ProjetPooGr5 {
 			this->txt_id_supérieur->Size = System::Drawing::Size(179, 20);
 			this->txt_id_supérieur->TabIndex = 27;
 			// 
-			// txt_id_adresse_facturation
+			// txt_id_adresse
 			// 
-			this->txt_id_adresse_facturation->Location = System::Drawing::Point(82, 374);
-			this->txt_id_adresse_facturation->Name = L"txt_id_adresse_facturation";
-			this->txt_id_adresse_facturation->Size = System::Drawing::Size(179, 20);
-			this->txt_id_adresse_facturation->TabIndex = 26;
+			this->txt_id_adresse->Location = System::Drawing::Point(82, 374);
+			this->txt_id_adresse->Name = L"txt_id_adresse";
+			this->txt_id_adresse->Size = System::Drawing::Size(179, 20);
+			this->txt_id_adresse->TabIndex = 26;
 			// 
 			// label3
 			// 
@@ -224,6 +216,8 @@ namespace ProjetPooGr5 {
 			this->button1->TabIndex = 19;
 			this->button1->Text = L"Inserer personnel";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &FormPersonnel::button1_Click);
+
 			// 
 			// button2
 			// 
@@ -250,7 +244,7 @@ namespace ProjetPooGr5 {
 			this->label8->Location = System::Drawing::Point(415, 249);
 			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(87, 17);
+			this->label8->Size = System::Drawing::Size(65, 13);
 			this->label8->TabIndex = 35;
 			this->label8->Text = L"id Personnel";
 			// 
@@ -259,7 +253,7 @@ namespace ProjetPooGr5 {
 			this->id_client->Location = System::Drawing::Point(415, 269);
 			this->id_client->Margin = System::Windows::Forms::Padding(4);
 			this->id_client->Name = L"id_client";
-			this->id_client->Size = System::Drawing::Size(167, 22);
+			this->id_client->Size = System::Drawing::Size(167, 20);
 			this->id_client->TabIndex = 34;
 			// 
 			// button4
@@ -276,21 +270,16 @@ namespace ProjetPooGr5 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-
-			this->ClientSize = System::Drawing::Size(1275, 548);
+			this->ClientSize = System::Drawing::Size(956, 445);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->id_client);
 			this->Controls->Add(this->button4);
-
-			this->ClientSize = System::Drawing::Size(956, 445);
-
-			this->Controls->Add(this->txt_id_adresses_livraison);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->txt_id_supérieur);
-			this->Controls->Add(this->txt_id_adresse_facturation);
+			this->Controls->Add(this->txt_id_adresse);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->txt_Id_date_embauche);
 			this->Controls->Add(this->label2);
@@ -301,7 +290,7 @@ namespace ProjetPooGr5 {
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button3);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"FormPersonnel";
 			this->Text = L"FormPersonnel";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -311,7 +300,9 @@ namespace ProjetPooGr5 {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	 
+		this->oSvc = gcnew NS_Comp_Svc::CLservice();
+		this->oSvc->ajouterUnpersonnel(this->txt_nom->Text, this->txt_prenom->Text, this->txt_Id_date_embauche->Text, this->txt_id_supérieur->Text, this->txt_id_adresse->Text);
+
 	}
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
@@ -323,8 +314,8 @@ namespace ProjetPooGr5 {
 		this->dataGridView1->DataSource = this->oDs;
 		this->dataGridView1->DataMember = "Rsl";
 	}
-private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-}
+
+
 private: System::Void id_client_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
