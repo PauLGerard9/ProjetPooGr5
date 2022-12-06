@@ -43,6 +43,13 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerToutCommande(System::
 	sql = this->oMapp->SelectCommande();
 	return this->oCad->getRows(sql, dataTableName);
 }
+System::Data::DataSet^ NS_Comp_Svc::CLservice::seuilReapro(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMapp->SelectReapro();
+	return this->oCad->getRows(sql, dataTableName);
+}
 
 void NS_Comp_Svc::CLservice::ajouterUnclient(System::String^ nom, System::String^ prenom, System::String^ Id_date_premiere_commande, System::String^ id_adresse_facturation, System::String^ id_date_naissance, System::String^ id_adresses_livraison)
 {

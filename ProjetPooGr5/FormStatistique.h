@@ -159,8 +159,9 @@ namespace ProjetPooGr5 {
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(144, 28);
 			this->button7->TabIndex = 55;
-			this->button7->Text = L"afficher commande";
+			this->button7->Text = L"inf seuil réapro";
 			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &FormStatistique::button7_Click_1);
 			// 
 			// button8
 			// 
@@ -224,6 +225,13 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	this->dataGridView1->Refresh();
 	this->oSvc = gcnew NS_Comp_Svc::CLservice();
 	this->oDs = this->oSvc->panierMoyen("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
+}
+private: System::Void button7_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oDs = this->oSvc->seuilReapro("Rsl");
 	this->dataGridView1->DataSource = this->oDs;
 	this->dataGridView1->DataMember = "Rsl";
 }

@@ -22,6 +22,10 @@ System::String^ NS_Comp_Mappage::CLmap::SelectCommande(void)
 {
 	return "SELECT * FROM Commande ;";
 }
+System::String^ NS_Comp_Mappage::CLmap::SelectReapro(void)
+{
+	return "SELECT * FROM Article WHERE Quantité_en_stock < Seuil_réaprovisionement; ";
+}
 
 System::String^ NS_Comp_Mappage::CLmap::Insert_humain(void)
 {
