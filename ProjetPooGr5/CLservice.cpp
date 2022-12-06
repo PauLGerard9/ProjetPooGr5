@@ -141,3 +141,14 @@ void NS_Comp_Svc::CLservice::supprimerUnPersonnel(System::String^ id_client)
 
 	this->oCad->actionRows(sql);
 }
+
+void NS_Comp_Svc::CLservice::supprimerUnStock(System::String^ id_client)
+{
+	System::String^ sql;
+
+	this->oMapp->setid_client(id_client);
+
+	sql = this->oMapp->Delete_stock();
+
+	this->oCad->actionRows(sql);
+}

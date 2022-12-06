@@ -25,6 +25,7 @@ namespace NS_Comp_Mappage
 		System::String^ Insert_humain(void);
 		System::String^ Delete_client(void);
 		System::String^ Delete_personnel(void);
+		System::String^ Delete_stock(void);
 		System::String^ Update(void);
 		System::String^ PlusVendu(void);
 		System::String^ SelectMoinsVendu(void);

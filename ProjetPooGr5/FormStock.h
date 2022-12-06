@@ -54,6 +54,9 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::TextBox^ id_client;
+	private: System::Windows::Forms::Button^ button4;
 	protected:
 
 	private:
@@ -86,6 +89,9 @@ namespace ProjetPooGr5 {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->id_client = (gcnew System::Windows::Forms::TextBox());
+			this->button4 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -247,11 +253,43 @@ namespace ProjetPooGr5 {
 			this->dataGridView1->Size = System::Drawing::Size(1125, 196);
 			this->dataGridView1->TabIndex = 17;
 			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(443, 266);
+			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(58, 17);
+			this->label8->TabIndex = 38;
+			this->label8->Text = L"id Stock";
+			// 
+			// id_client
+			// 
+			this->id_client->Location = System::Drawing::Point(443, 286);
+			this->id_client->Margin = System::Windows::Forms::Padding(4);
+			this->id_client->Name = L"id_client";
+			this->id_client->Size = System::Drawing::Size(167, 22);
+			this->id_client->TabIndex = 37;
+			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(447, 234);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(168, 28);
+			this->button4->TabIndex = 36;
+			this->button4->Text = L"supprimer Stock";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &FormStock::button4_Click);
+			// 
 			// FormStock
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1278, 666);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->id_client);
+			this->Controls->Add(this->button4);
 			this->Controls->Add(this->txt_id_adresses_livraison);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -287,5 +325,9 @@ namespace ProjetPooGr5 {
 		this->dataGridView1->DataSource = this->oDs;
 		this->dataGridView1->DataMember = "Rsl";
 	}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oSvc->supprimerUnStock(this->id_client->Text);
+}
 };
 }

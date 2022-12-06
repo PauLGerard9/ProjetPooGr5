@@ -267,6 +267,7 @@ namespace ProjetPooGr5 {
 			this->label8->Size = System::Drawing::Size(87, 17);
 			this->label8->TabIndex = 35;
 			this->label8->Text = L"id Personnel";
+			this->label8->Click += gcnew System::EventHandler(this, &FormPersonnel::label8_Click);
 			// 
 			// id_client
 			// 
@@ -341,6 +342,8 @@ private: System::Void id_client_TextChanged(System::Object^ sender, System::Even
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc = gcnew NS_Comp_Svc::CLservice();
 	this->oSvc->supprimerUnPersonnel(this->id_client->Text);
+}
+private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
