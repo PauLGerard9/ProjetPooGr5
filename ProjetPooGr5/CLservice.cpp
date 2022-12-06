@@ -20,6 +20,13 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerTousLePersonnel(Syste
 	sql = this->oMapp->SelectPersonnel();
 	return this->oCad->getRows(sql, dataTableName);
 }
+System::Data::DataSet^ NS_Comp_Svc::CLservice::panierMoyen(System::String^ dataTableName)
+{
+	System::String^ sql;
+
+	sql = this->oMapp->SelectPanierMoyen();
+	return this->oCad->getRows(sql, dataTableName);
+}
 
 System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerTousLeStock(System::String^ dataTableName)
 {

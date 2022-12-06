@@ -8,7 +8,10 @@ System::String^ NS_Comp_Mappage::CLmap::SelectPersonnel(void)
 {
 	return "SELECT * FROM Humain INNER JOIN Personnel ON Humain.Id_humain = Personnel.Id_humain;";
 }
-
+System::String^ NS_Comp_Mappage::CLmap::SelectPanierMoyen(void)
+{
+	return "SELECT AVG(Montant) as 'Prix du panier moyen' FROM Paiements; ";
+}
 
 System::String^ NS_Comp_Mappage::CLmap::SelectStock(void)
 {

@@ -20,6 +20,7 @@ namespace NS_Comp_Mappage
 		System::String^ SelectPersonnel(void);
 		System::String^ SelectStock(void);
 		System::String^ SelectCommande(void);
+		System::String^ SelectPanierMoyen(void);
 		System::String^ Insert_humain(void);
 		System::String^ Delete_client(void);
 		System::String^ Update(void);
