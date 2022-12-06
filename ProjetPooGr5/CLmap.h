@@ -34,6 +34,7 @@ namespace NS_Comp_Mappage
 		System::String^ Insert_humain(void);
 		System::String^ Insert_personnel(void);
 		System::String^ Insert_article(void);
+		System::String^ Insert_commande(void);
 
 
 		System::String^ Delete_client(void);

@@ -80,6 +80,10 @@ System::String^ NS_Comp_Mappage::CLmap::Insert_article(void)
 {
 	return "INSERT INTO article ([Référence_article], [Nom_article], [Quantité_en_stock], [Prix_HT],[Seuil_réaprovisionement],[Id_TVA]) VALUES('" + this->nom + "', '" + this->prenom + "', '"+ this->txt_id_supérieur +"', '"+ this->txt_Id_date_embauche + "', '" + this->txt_id_supérieur + "', '" + this->txt_id_adresse + "'); ";
 }
+System::String^ NS_Comp_Mappage::CLmap::Insert_commande(void)
+{
+	return "INSERT INTO commande ([Référence_commande], [Id_remise], [Id_date_commande], [Id_date_livraison],[Id_date_paiement_final],[num_client]) VALUES('" + this->nom + "', '" + this->prenom + "', '" + this->txt_id_supérieur + "', '" + this->txt_Id_date_embauche + "', '" + this->txt_id_supérieur + "', '" + this->txt_id_adresse + "'); ";
+}
 
 
 System::String^ NS_Comp_Mappage::CLmap::Delete_client(void)

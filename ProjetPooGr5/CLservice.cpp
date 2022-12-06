@@ -203,7 +203,23 @@ void NS_Comp_Svc::CLservice::ajouterUnstock(System::String^ txt_ref_article, Sys
 
 	this->oCad->actionRows(sql);
 }
+void NS_Comp_Svc::CLservice::ajouterUneCommande(System::String^ txt_ref_commande, System::String^ txt_id_remise, System::String^ txt_Id_date_commande, System::String^ txt_id_date_livraison, System::String^ txt_id_date_paiement_final, System::String^ txt_num_client)
+{
 
+	System::String^ sql;
+
+	this->oMapp->setNom(txt_ref_commande);
+	this->oMapp->setPrenom(txt_id_remise);
+	this->oMapp->set_txt_id_supérieur(txt_Id_date_commande);
+	this->oMapp->set_txt_Id_date_embauche(txt_id_date_livraison);
+	this->oMapp->set_txt_id_supérieur(txt_id_date_paiement_final);
+	this->oMapp->set_txt_id_adresse(txt_num_client);
+
+
+	sql = this->oMapp->Insert_commande();
+
+	this->oCad->actionRows(sql);
+}
 void NS_Comp_Svc::CLservice::supprimerUnclient(System::String^ id_client)
 {
 	System::String^ sql;
