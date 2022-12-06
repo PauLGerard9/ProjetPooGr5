@@ -111,6 +111,25 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::selectionnerToutCommande(System::
 	sql = this->oMapp->SelectCommande();
 	return this->oCad->getRows(sql, dataTableName);
 }
+
+System::Data::DataSet^ NS_Comp_Svc::CLservice::selection_perso(System::String^ dataTableName, System::String^ requete)
+{
+	System::String^ sql;
+
+	this->oMapp->setNom(requete);
+	sql = this->oMapp->select_perso();
+	return this->oCad->getRows(sql, dataTableName);
+}
+void NS_Comp_Svc::CLservice::action_perso(System::String^ action)
+{
+	System::String^ sql;
+
+	this->oMapp->setid_client(action);
+	sql = this->oMapp->action_personnel();
+	this->oCad->actionRows(sql);
+}
+
+
 System::Data::DataSet^ NS_Comp_Svc::CLservice::seuilReapro(System::String^ dataTableName)
 {
 	System::String^ sql;

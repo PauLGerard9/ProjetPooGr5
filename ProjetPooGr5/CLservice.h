@@ -18,6 +18,8 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ selectionnerTousLePersonnel(System::String^);
 		System::Data::DataSet^ selectionnerToutCommande(System::String^);
 		System::Data::DataSet^ selectionnertableclient(System::String^);
+		System::Data::DataSet^ selection_perso(System::String^, System::String^);
+
 		System::Data::DataSet^ panierMoyen(System::String^);
 		System::Data::DataSet^ seuilReapro(System::String^);
 		System::Data::DataSet^ ArticlePlusVendu(System::String^);
@@ -31,7 +33,8 @@ namespace NS_Comp_Svc
 		void ajouterUnstock(System::String^ txt_ref_article, System::String^ txt_nom_article, System::String^ txt_prix_ht, System::String^ quantite,System::String^ txt_seuil_reapro, System::String^ txt_id_tva);
 		void ajouterUneCommande(System::String^ txt_ref_commande, System::String^ txt_id_remise, System::String^ txt_Id_date_commande, System::String^ txt_id_date_livraison, System::String^ txt_id_date_paiement_final, System::String^ txt_num_client);
 
-		
+		void action_perso(System::String^ action);
+
 		
 		void supprimerUnclient(System::String^ id_client);
 		void supprimerUnPersonnel(System::String^ id_client);

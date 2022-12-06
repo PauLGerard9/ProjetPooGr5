@@ -28,6 +28,11 @@ namespace NS_Comp_Mappage
 		System::String^ SelectPersonnel(void);
 		System::String^ SelectStock(void);
 		System::String^ SelectCommande(void);
+		System::String^ select_perso(void);
+		System::String^ action_personnel(void);
+
+		
+
 		System::String^ SelectReapro(void);
 		System::String^ SelectPanierMoyen(void);
 		
