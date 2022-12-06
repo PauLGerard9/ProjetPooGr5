@@ -19,6 +19,7 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ selectionnerToutCommande(System::String^);
 		System::Data::DataSet^ panierMoyen(System::String^);
 		System::Data::DataSet^ seuilReapro(System::String^);
+		System::Data::DataSet^ ArticlePlusVendu(System::String^);
 		void supprimerUnclient(System::String^ id_client);
 
 	};

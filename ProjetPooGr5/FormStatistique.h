@@ -149,8 +149,9 @@ namespace ProjetPooGr5 {
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(144, 28);
 			this->button6->TabIndex = 54;
-			this->button6->Text = L"afficher commande";
+			this->button6->Text = L"Plus Vendu";
 			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &FormStatistique::button6_Click);
 			// 
 			// button7
 			// 
@@ -232,6 +233,13 @@ private: System::Void button7_Click_1(System::Object^ sender, System::EventArgs^
 	this->dataGridView1->Refresh();
 	this->oSvc = gcnew NS_Comp_Svc::CLservice();
 	this->oDs = this->oSvc->seuilReapro("Rsl");
+	this->dataGridView1->DataSource = this->oDs;
+	this->dataGridView1->DataMember = "Rsl";
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->dataGridView1->Refresh();
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oDs = this->oSvc->ArticlePlusVendu("Rsl");
 	this->dataGridView1->DataSource = this->oDs;
 	this->dataGridView1->DataMember = "Rsl";
 }

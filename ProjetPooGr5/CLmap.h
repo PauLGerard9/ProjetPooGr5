@@ -25,7 +25,7 @@ namespace NS_Comp_Mappage
 		System::String^ Insert_humain(void);
 		System::String^ Delete_client(void);
 		System::String^ Update(void);
-
+		System::String^ PlusVendu(void);
 		void setNom(System::String^);
 		void setPrenom(System::String^);
 		void set_id_date_premiere_commande(System::String^ Id_date_premiere_commande);
