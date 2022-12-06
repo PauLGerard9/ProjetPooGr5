@@ -76,7 +76,10 @@ System::String^ NS_Comp_Mappage::CLmap::Insert_personnel(void)
 {
 	return "INSERT INTO humain (nom, prenom) VALUES('" + this->nom + "','" + this->prenom + "'); INSERT INTO Personnel( Id_date, ID_superieur, ID_adresses,ID_humain) VALUES( '" + this->txt_Id_date_embauche + "', '" + this->txt_id_supérieur + "', '" + this->txt_id_adresse + "', (SELECT TOP 1 percent id_humain FROM humain WHERE nom = '" + this->nom + "' and prenom = '" + this->prenom + "')); ";
 }
-
+System::String^ NS_Comp_Mappage::CLmap::Insert_article(void)
+{
+	return "INSERT INTO article ([Référence_article], [Nom_article], [Quantité_en_stock], [Prix_HT],[Seuil_réaprovisionement],[Id_TVA]) VALUES('" + this->nom + "', '" + this->prenom + "', '"+ this->txt_id_supérieur +"', '"+ this->txt_Id_date_embauche + "', '" + this->txt_id_supérieur + "', '" + this->txt_id_adresse + "'); ";
+}
 
 
 System::String^ NS_Comp_Mappage::CLmap::Delete_client(void)

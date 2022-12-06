@@ -164,6 +164,24 @@ void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::Str
 	this->oCad->actionRows(sql);
 }
 
+void NS_Comp_Svc::CLservice::ajouterUnstock(System::String^ txt_ref_article, System::String^ txt_nom_article, System::String^ quantite, System::String^ txt_prix_ht, System::String^ txt_seuil_reapro, System::String^ txt_id_tva)
+{
+	    
+	System::String^ sql;
+
+	this->oMapp->setNom(txt_ref_article);
+	this->oMapp->setPrenom(txt_nom_article);
+	this->oMapp->set_txt_id_supérieur(quantite);
+	this->oMapp->set_txt_Id_date_embauche(txt_prix_ht);
+	this->oMapp->set_txt_id_supérieur(txt_seuil_reapro);
+	this->oMapp->set_txt_id_adresse(txt_id_tva);
+
+	
+	sql = this->oMapp->Insert_article();
+
+	this->oCad->actionRows(sql);
+}
+
 void NS_Comp_Svc::CLservice::supprimerUnclient(System::String^ id_client)
 {
 	System::String^ sql;

@@ -13,7 +13,7 @@ namespace NS_Comp_Svc
 		CLservice(void);
 		System::Data::DataSet^ selectionnerToutesLesPersonnes(System::String^);
 		void ajouterUnclient(System::String^ nom, System::String^ prenom, System::String^ Id_date_premiere_commande, System::String^ id_adresse_facturation, System::String^ id_date_naissance, System::String^ id_adresses_livraison);
-		System::Data::DataSet^ selectionnerMontantClient(System::String^, System::String^ id_client);
+		System::Data::DataSet^ selectionnerMontantClient(System::String^);
 		System::Data::DataSet^ selectionnerTousLeStock(System::String^);
 		System::Data::DataSet^ selectionnerTousLePersonnel(System::String^);
 		System::Data::DataSet^ selectionnerToutCommande(System::String^);
@@ -24,14 +24,18 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ ArticleMoinsVendu(System::String^);
 		System::Data::DataSet^ ValeurCommercial(System::String^);
 		System::Data::DataSet^ ValeurAchat(System::String^);
-		System::Data::DataSet^ ChiffreAffaire(System::String^, System::String^ id_client);
+		System::Data::DataSet^ ChiffreAffaire(System::String^);
 		System::Data::DataSet^ Variation(System::String^);
+
 		void ajouterUnpersonnel(System::String^ nom, System::String^ prenom, System::String^ txt_Id_date_embauche, System::String^ txt_id_supérieur, System::String^ txt_id_adresse);
-		//void ChiffreAffaire(System::String^ id_client);
+		void ajouterUnstock(System::String^ txt_ref_article, System::String^ txt_nom_article, System::String^ txt_prix_ht, System::String^ quantite,System::String^ txt_seuil_reapro, System::String^ txt_id_tva);
+
+		
 		void supprimerUnclient(System::String^ id_client);
 		void supprimerUnPersonnel(System::String^ id_client);
 		void supprimerUnStock(System::String^ id_client);
 		void supprimerUneCommande(System::String^ id_client);
+
 		void modifierUnclient(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
 		void modifierUnpersonnel(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
 

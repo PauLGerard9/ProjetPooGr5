@@ -454,6 +454,10 @@ private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e)
 }
 private: System::Void button4_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc = gcnew NS_Comp_Svc::CLservice();
+	this->oSvc->supprimerUnPersonnel(this->id_client->Text);
+}
+private: System::Void button4_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc = gcnew NS_Comp_Svc::CLservice();
 	this->oSvc->modifierUnpersonnel(this->textBox1->Text, this->txt_colonne_a_changer->Text, this->txt_nouvel_valeur->Text);
 }
 };
