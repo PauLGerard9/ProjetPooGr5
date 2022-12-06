@@ -23,6 +23,7 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ ArticlePlusVendu(System::String^);
 		System::Data::DataSet^ ArticleMoinsVendu(System::String^);
 		System::Data::DataSet^ ValeurCommercial(System::String^);
+		System::Data::DataSet^ VerifDate(System::String^, System::String^ id_date);
 		System::Data::DataSet^ ValeurAchat(System::String^);
 		System::Data::DataSet^ ChiffreAffaire(System::String^ dataTableName, System::String^ id_client);
 		System::Data::DataSet^ Variation(System::String^);

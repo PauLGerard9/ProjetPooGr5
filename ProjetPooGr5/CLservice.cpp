@@ -91,6 +91,17 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::ChiffreAffaire(System::String^ da
 	
 }
 
+System::Data::DataSet^ NS_Comp_Svc::CLservice::VerifDate(System::String^, System::String^ id_date) {
+	System::String^ sql;
+
+	this->oMapp->setid_client(id_date);
+
+	sql = this->oMapp->VerifDadate();
+
+	this->oCad->actionRows(sql);
+	return 
+}
+
 
 System::Data::DataSet^ NS_Comp_Svc::CLservice::Variation(System::String^ dataTableName)
 {
@@ -154,11 +165,17 @@ void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::Str
 		MessageBox::Show("Merci de remplir les champs manquants", "un ou plusieurs champs vide", MessageBoxButtons::OK);
 		return;
 	}
-	if ((nom->Contains(" ")))
+
+	if ((nom->Contains(" "))||(prenom->Contains(" ")) || (txt_Id_date_embauche->Contains(" ")) || (txt_id_supérieur->Contains(" ")) || (txt_id_adresse->Contains(" ")))
 	{
 		MessageBox::Show("Merci de ne pas mettre d'espace dans les textBox", "un ou plusieurs champs contenant des espaces", MessageBoxButtons::OK);
 		return;
 	}
+
+
+
+
+
 	sql = this->oMapp->Insert_personnel();
 
 	this->oCad->actionRows(sql);
