@@ -148,6 +148,7 @@ void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::Str
 	this->oMapp->set_txt_Id_date_embauche(txt_Id_date_embauche);
 	this->oMapp->set_txt_id_supérieur(txt_id_supérieur);
 	this->oMapp->set_txt_id_adresse(txt_id_adresse);
+
 	if (nom == "" || prenom==""  || txt_id_adresse=="" ||txt_id_supérieur=="" ||txt_id_adresse =="" )
 	{
 		MessageBox::Show("Merci de remplir les champs manquants", "un ou plusieurs champs vide", MessageBoxButtons::OK);

@@ -49,6 +49,8 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Button^ button10;
 	private: System::Windows::Forms::TextBox^ id_client;
 	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
 
 
 
@@ -84,6 +86,8 @@ namespace ProjetPooGr5 {
 			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->id_client = (gcnew System::Windows::Forms::TextBox());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -180,7 +184,7 @@ namespace ProjetPooGr5 {
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(144, 28);
 			this->button8->TabIndex = 56;
-			this->button8->Text = L"derniere requete";
+			this->button8->Text = L"Prevision";
 			this->button8->UseVisualStyleBackColor = true;
 			this->button8->Click += gcnew System::EventHandler(this, &FormStatistique::button8_Click);
 			// 
@@ -208,25 +212,43 @@ namespace ProjetPooGr5 {
 			// 
 			// id_client
 			// 
-			this->id_client->Location = System::Drawing::Point(994, 344);
+			this->id_client->Location = System::Drawing::Point(870, 373);
 			this->id_client->Name = L"id_client";
 			this->id_client->Size = System::Drawing::Size(100, 22);
 			this->id_client->TabIndex = 59;
-			this->id_client->Text = L"Mois";
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(439, 374);
+			this->textBox1->Location = System::Drawing::Point(483, 373);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(100, 22);
 			this->textBox1->TabIndex = 60;
-			this->textBox1->Text = L"nom client";
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(421, 378);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(56, 17);
+			this->label1->TabIndex = 61;
+			this->label1->Text = L"id client";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(823, 378);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(37, 17);
+			this->label2->TabIndex = 62;
+			this->label2->Text = L"mois";
 			// 
 			// FormStatistique
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1176, 533);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->id_client);
 			this->Controls->Add(this->button10);

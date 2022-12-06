@@ -43,7 +43,7 @@ System::String^ NS_Comp_Mappage::CLmap::SelectMoinsVendu(void)
 
 System::String^ NS_Comp_Mappage::CLmap::MontantClient(void)
 {
-	return "SELECT SUM(Montant) as 'Chiffre d''affaire sur un mois précis' FROM Paiements LEFT JOIN Date_ ON Paiements.Id_date_paiement = Date_.id_date WHERE MONTH(Date_.Date_) = '" + this->id_client + "' AND YEAR(Date_.Date_) = 2011; ";
+	return "SELECT SUM(Montant) FROM Commande FULL JOIN Paiements ON Paiements.Référence_commande = Commande.Référence_commande WHERE num_client = ' "+ this->id_client+ " ';";
 }
 System::String^ NS_Comp_Mappage::CLmap::SelectValeurCommercial(void)
 {
