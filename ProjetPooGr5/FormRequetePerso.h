@@ -71,12 +71,15 @@ namespace ProjetPooGr5 {
 			this->Controls->Add(this->button1);
 			this->Name = L"FormRequetePerso";
 			this->Text = L"FormRequetePerso";
+			this->Load += gcnew System::EventHandler(this, &FormRequetePerso::FormRequetePerso_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
+	}
+	private: System::Void FormRequetePerso_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	};
 }

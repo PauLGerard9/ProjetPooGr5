@@ -1,5 +1,6 @@
 #include "CLservice.h"
 
+
 using namespace System::Windows::Forms;
 
 NS_Comp_Svc::CLservice::CLservice(void)
@@ -150,6 +151,8 @@ void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::Str
 	this->oMapp->set_txt_id_supérieur(txt_id_supérieur);
 	this->oMapp->set_txt_id_adresse(txt_id_adresse);
 
+	
+
 	if (nom == "" || prenom==""  || txt_id_adresse=="" ||txt_id_supérieur=="" ||txt_id_adresse =="" )
 	{
 		MessageBox::Show("Merci de remplir les champs manquants", "un ou plusieurs champs vide", MessageBoxButtons::OK);
@@ -167,12 +170,6 @@ void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::Str
 		MessageBox::Show("Attention, vos noms et prenoms doivent commencer par une majuscule", "Oubli de majuscule", MessageBoxButtons::OK);
 		return;
 	}
-	try{  
-		
-	} 
-	catch (...) {
-
-	}
 	try
 	{
 		sql = this->oMapp->Insert_personnel();
@@ -184,6 +181,7 @@ void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::Str
 		MessageBox::Show("ATTENTION !!! un des id que vous avez renseignez n'est pas valide, veuillez vérifier vos ID svp", "ERREUR ID", MessageBoxButtons::OK);
 		return;
 	}
+
 }
 
 void NS_Comp_Svc::CLservice::ajouterUnstock(System::String^ txt_ref_article, System::String^ txt_nom_article, System::String^ quantite, System::String^ txt_prix_ht, System::String^ txt_seuil_reapro, System::String^ txt_id_tva)

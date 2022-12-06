@@ -69,6 +69,7 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::TextBox^ txt_nouvel_valeur;
 	private: System::Windows::Forms::Button^ afficher_table_personnel;
+	private: System::Windows::Forms::DataGridView^ dataGridView2;
 
 
 
@@ -116,7 +117,9 @@ namespace ProjetPooGr5 {
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->txt_nouvel_valeur = (gcnew System::Windows::Forms::TextBox());
 			this->afficher_table_personnel = (gcnew System::Windows::Forms::Button());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button3
@@ -171,7 +174,7 @@ namespace ProjetPooGr5 {
 			// txt_id_supérieur
 			// 
 			this->txt_id_supérieur->Location = System::Drawing::Point(109, 412);
-			this->txt_id_supérieur->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->txt_id_supérieur->Margin = System::Windows::Forms::Padding(4);
 			this->txt_id_supérieur->Name = L"txt_id_supérieur";
 			this->txt_id_supérieur->Size = System::Drawing::Size(237, 22);
 			this->txt_id_supérieur->TabIndex = 27;
@@ -179,7 +182,7 @@ namespace ProjetPooGr5 {
 			// txt_id_adresse
 			// 
 			this->txt_id_adresse->Location = System::Drawing::Point(109, 460);
-			this->txt_id_adresse->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->txt_id_adresse->Margin = System::Windows::Forms::Padding(4);
 			this->txt_id_adresse->Name = L"txt_id_adresse";
 			this->txt_id_adresse->Size = System::Drawing::Size(237, 22);
 			this->txt_id_adresse->TabIndex = 26;
@@ -197,7 +200,7 @@ namespace ProjetPooGr5 {
 			// txt_Id_date_embauche
 			// 
 			this->txt_Id_date_embauche->Location = System::Drawing::Point(109, 364);
-			this->txt_Id_date_embauche->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->txt_Id_date_embauche->Margin = System::Windows::Forms::Padding(4);
 			this->txt_Id_date_embauche->Name = L"txt_Id_date_embauche";
 			this->txt_Id_date_embauche->Size = System::Drawing::Size(237, 22);
 			this->txt_Id_date_embauche->TabIndex = 24;
@@ -225,7 +228,7 @@ namespace ProjetPooGr5 {
 			// txt_prenom
 			// 
 			this->txt_prenom->Location = System::Drawing::Point(109, 316);
-			this->txt_prenom->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->txt_prenom->Margin = System::Windows::Forms::Padding(4);
 			this->txt_prenom->Name = L"txt_prenom";
 			this->txt_prenom->Size = System::Drawing::Size(237, 22);
 			this->txt_prenom->TabIndex = 21;
@@ -233,7 +236,7 @@ namespace ProjetPooGr5 {
 			// txt_nom
 			// 
 			this->txt_nom->Location = System::Drawing::Point(115, 268);
-			this->txt_nom->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->txt_nom->Margin = System::Windows::Forms::Padding(4);
 			this->txt_nom->Name = L"txt_nom";
 			this->txt_nom->Size = System::Drawing::Size(237, 22);
 			this->txt_nom->TabIndex = 20;
@@ -241,7 +244,7 @@ namespace ProjetPooGr5 {
 			// button1
 			// 
 			this->button1->Location = System::Drawing::Point(115, 217);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(188, 28);
 			this->button1->TabIndex = 19;
@@ -252,7 +255,7 @@ namespace ProjetPooGr5 {
 			// button2
 			// 
 			this->button2->Location = System::Drawing::Point(1035, 215);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(144, 28);
 			this->button2->TabIndex = 18;
@@ -264,7 +267,7 @@ namespace ProjetPooGr5 {
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(13, 14);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->Size = System::Drawing::Size(1125, 196);
@@ -283,7 +286,7 @@ namespace ProjetPooGr5 {
 			// id_client
 			// 
 			this->id_client->Location = System::Drawing::Point(477, 273);
-			this->id_client->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->id_client->Margin = System::Windows::Forms::Padding(5);
 			this->id_client->Name = L"id_client";
 			this->id_client->Size = System::Drawing::Size(221, 22);
 			this->id_client->TabIndex = 34;
@@ -291,7 +294,7 @@ namespace ProjetPooGr5 {
 			// button4
 			// 
 			this->button4->Location = System::Drawing::Point(477, 213);
-			this->button4->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->button4->Margin = System::Windows::Forms::Padding(5);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(224, 34);
 			this->button4->TabIndex = 33;
@@ -302,7 +305,7 @@ namespace ProjetPooGr5 {
 			// button5
 			// 
 			this->button5->Location = System::Drawing::Point(768, 215);
-			this->button5->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button5->Margin = System::Windows::Forms::Padding(4);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(100, 28);
 			this->button5->TabIndex = 36;
@@ -323,7 +326,7 @@ namespace ProjetPooGr5 {
 			// textBox1
 			// 
 			this->textBox1->Location = System::Drawing::Point(768, 268);
-			this->textBox1->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->textBox1->Margin = System::Windows::Forms::Padding(5);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(221, 22);
 			this->textBox1->TabIndex = 38;
@@ -341,7 +344,7 @@ namespace ProjetPooGr5 {
 			// txt_colonne_a_changer
 			// 
 			this->txt_colonne_a_changer->Location = System::Drawing::Point(768, 316);
-			this->txt_colonne_a_changer->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->txt_colonne_a_changer->Margin = System::Windows::Forms::Padding(5);
 			this->txt_colonne_a_changer->Name = L"txt_colonne_a_changer";
 			this->txt_colonne_a_changer->Size = System::Drawing::Size(221, 22);
 			this->txt_colonne_a_changer->TabIndex = 40;
@@ -359,7 +362,7 @@ namespace ProjetPooGr5 {
 			// txt_nouvel_valeur
 			// 
 			this->txt_nouvel_valeur->Location = System::Drawing::Point(768, 367);
-			this->txt_nouvel_valeur->Margin = System::Windows::Forms::Padding(5, 5, 5, 5);
+			this->txt_nouvel_valeur->Margin = System::Windows::Forms::Padding(5);
 			this->txt_nouvel_valeur->Name = L"txt_nouvel_valeur";
 			this->txt_nouvel_valeur->Size = System::Drawing::Size(221, 22);
 			this->txt_nouvel_valeur->TabIndex = 42;
@@ -367,18 +370,29 @@ namespace ProjetPooGr5 {
 			// afficher_table_personnel
 			// 
 			this->afficher_table_personnel->Location = System::Drawing::Point(1035, 252);
-			this->afficher_table_personnel->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->afficher_table_personnel->Margin = System::Windows::Forms::Padding(4);
 			this->afficher_table_personnel->Name = L"afficher_table_personnel";
 			this->afficher_table_personnel->Size = System::Drawing::Size(185, 28);
 			this->afficher_table_personnel->TabIndex = 43;
 			this->afficher_table_personnel->Text = L"afficher_table_personnel";
 			this->afficher_table_personnel->UseVisualStyleBackColor = true;
 			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Location = System::Drawing::Point(1128, 200);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->RowHeadersWidth = 51;
+			this->dataGridView2->RowTemplate->Height = 24;
+			this->dataGridView2->Size = System::Drawing::Size(10, 10);
+			this->dataGridView2->TabIndex = 44;
+			// 
 			// FormPersonnel
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1275, 548);
+			this->Controls->Add(this->dataGridView2);
 			this->Controls->Add(this->afficher_table_personnel);
 			this->Controls->Add(this->txt_nouvel_valeur);
 			this->Controls->Add(this->label11);
@@ -410,13 +424,27 @@ namespace ProjetPooGr5 {
 			this->Name = L"FormPersonnel";
 			this->Text = L"FormPersonnel";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	
+		try {
+			this->dataGridView2->Refresh();
+			this->oSvc = gcnew NS_Comp_Svc::CLservice();
+			this->oDs = this->oSvc->selectionnerTousLePersonnel("Rsl");
+			this->dataGridView2->DataSource = this->oDs;
+			this->dataGridView2->DataMember = "Rsl";
+			
+			
+		}
+		catch (...) {
+			MessageBox::Show("ATTENTION, Vous n'êtes pas conecter a la BDD", "ERREUR Connexion", MessageBoxButtons::OK);
+			return;
+
+		}
 		this->oSvc = gcnew NS_Comp_Svc::CLservice();
 		this->oSvc->ajouterUnpersonnel(this->txt_nom->Text, this->txt_prenom->Text, this->txt_Id_date_embauche->Text, this->txt_id_supérieur->Text, this->txt_id_adresse->Text);
 
