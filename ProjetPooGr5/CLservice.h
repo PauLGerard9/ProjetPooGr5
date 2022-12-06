@@ -30,12 +30,12 @@ namespace NS_Comp_Svc
 		void ajouterUnpersonnel(System::String^ nom, System::String^ prenom, System::String^ txt_Id_date_embauche, System::String^ txt_id_supérieur, System::String^ txt_id_adresse);
 
 		void supprimerUnclient(System::String^ id_client);
-
 		void supprimerUnPersonnel(System::String^ id_client);
 		void supprimerUnStock(System::String^ id_client);
 		void supprimerUneCommande(System::String^ id_client);
 
 		void modifierUnclient(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
+		void modifierUnpersonnel(System::String^ id_client, System::String^ txt_colonne_a_changer, System::String^ txt_nouvel_valeur);
 
 
 		

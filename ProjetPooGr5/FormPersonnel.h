@@ -422,6 +422,11 @@ private: System::Void id_client_TextChanged(System::Object^ sender, System::Even
 		this->oSvc->supprimerUnPersonnel(this->id_client->Text);
 	}
 
+	private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc = gcnew NS_Comp_Svc::CLservice();
+		this->oSvc->modifierUnpersonnel(this->textBox1->Text, this->txt_colonne_a_changer->Text, this->txt_nouvel_valeur->Text);
+	}
+
 private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void txt_nom_TextChanged(System::Object^ sender, System::EventArgs^ e) {

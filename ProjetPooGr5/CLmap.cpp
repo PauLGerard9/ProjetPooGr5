@@ -105,6 +105,11 @@ System::String^ NS_Comp_Mappage::CLmap::Update_client(void)
 {
 	return "UPDATE Client SET "+ this->colonne_a_changer+" = '"+ this->nouvel_valeur +"' WHERE num_client = '"+ this->id_client +"'; ";
 }
+System::String^ NS_Comp_Mappage::CLmap::Update_personnel(void)
+{
+	return "UPDATE Personnel SET " + this->colonne_a_changer + " = '" + this->nouvel_valeur + "' WHERE id_personnel = '" + this->id_client + "'; ";
+}
+
 void NS_Comp_Mappage::CLmap::setid_client(System::String^ id_client){this->id_client = id_client;}
 void NS_Comp_Mappage::CLmap::setNom(System::String^ nom){this->nom = nom;}
 void NS_Comp_Mappage::CLmap::setPrenom(System::String^ prenom){this->prenom = prenom;}
