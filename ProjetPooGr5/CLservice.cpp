@@ -91,10 +91,6 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::ChiffreAffaire(System::String^ da
 	
 }
 
-int NS_Comp_Svc::CLservice::returnIdMaxDate()
-{
-	return 809;
-}
 
 
 System::Data::DataSet^ NS_Comp_Svc::CLservice::Variation(System::String^ dataTableName)
@@ -166,14 +162,18 @@ void NS_Comp_Svc::CLservice::ajouterUnpersonnel(System::String^ nom, System::Str
 		return;
 	}
 
-	int max_id_Date = returnIdMaxDate();
 
+	try
+	{
+		sql = this->oMapp->Insert_personnel();
 
-
-
-	sql = this->oMapp->Insert_personnel();
-
-	this->oCad->actionRows(sql);
+		this->oCad->actionRows(sql);
+	}
+	catch (...)
+	{
+		MessageBox::Show("ATTENTION !!! un des id que vous avez renseignez n'est pas valide, veuillez vérifier vos ID svp", "ERREUR ID", MessageBoxButtons::OK);
+		return;
+	}
 }
 
 void NS_Comp_Svc::CLservice::ajouterUnstock(System::String^ txt_ref_article, System::String^ txt_nom_article, System::String^ quantite, System::String^ txt_prix_ht, System::String^ txt_seuil_reapro, System::String^ txt_id_tva)

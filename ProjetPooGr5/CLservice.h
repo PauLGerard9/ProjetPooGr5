@@ -29,7 +29,7 @@ namespace NS_Comp_Svc
 
 		void ajouterUnpersonnel(System::String^ nom, System::String^ prenom, System::String^ txt_Id_date_embauche, System::String^ txt_id_supérieur, System::String^ txt_id_adresse);
 		void ajouterUnstock(System::String^ txt_ref_article, System::String^ txt_nom_article, System::String^ txt_prix_ht, System::String^ quantite,System::String^ txt_seuil_reapro, System::String^ txt_id_tva);
-		int returnIdMaxDate();
+		
 		
 		void supprimerUnclient(System::String^ id_client);
 		void supprimerUnPersonnel(System::String^ id_client);
