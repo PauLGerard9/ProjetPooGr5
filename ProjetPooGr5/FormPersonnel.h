@@ -416,6 +416,7 @@ namespace ProjetPooGr5 {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	
 		this->oSvc = gcnew NS_Comp_Svc::CLservice();
 		this->oSvc->ajouterUnpersonnel(this->txt_nom->Text, this->txt_prenom->Text, this->txt_Id_date_embauche->Text, this->txt_id_supérieur->Text, this->txt_id_adresse->Text);
 
