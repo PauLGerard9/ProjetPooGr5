@@ -120,7 +120,7 @@ namespace ProjetPooGr5 {
 			// button1
 			// 
 			this->button1->Location = System::Drawing::Point(808, 463);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(56, 19);
 			this->button1->TabIndex = 0;
@@ -231,6 +231,7 @@ namespace ProjetPooGr5 {
 			this->txt_ref_commande->Name = L"txt_ref_commande";
 			this->txt_ref_commande->Size = System::Drawing::Size(179, 20);
 			this->txt_ref_commande->TabIndex = 36;
+			this->txt_ref_commande->TextChanged += gcnew System::EventHandler(this, &FormCommande::txt_ref_commande_TextChanged);
 			// 
 			// button2
 			// 
@@ -241,7 +242,6 @@ namespace ProjetPooGr5 {
 			this->button2->Text = L"Inserer commande";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &FormCommande::button2_Click);
-
 			// 
 			// button3
 			// 
@@ -298,7 +298,6 @@ namespace ProjetPooGr5 {
 			this->button5->Text = L"modifier Commande";
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &FormCommande::button5_Click);
-
 			// 
 			// button6
 			// 
@@ -390,7 +389,7 @@ namespace ProjetPooGr5 {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button1);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"FormCommande";
 			this->Text = L"FormCommande";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -428,5 +427,7 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void id_client_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 
+private: System::Void txt_ref_commande_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

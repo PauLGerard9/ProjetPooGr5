@@ -148,5 +148,23 @@ namespace ProjetPooGr5 {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		
+
+		this->dataGridView1->Refresh();
+		this->oSvc = gcnew NS_Comp_Svc::CLservice();
+		this->oSvc->selection_perso("Rsl", this->txt_requete_perso->Text);
+		this->dataGridView1->DataSource = this->oDs;
+		this->dataGridView1->DataMember = "Rsl";
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->oSvc = gcnew NS_Comp_Svc::CLservice();
+		this->oSvc->action_perso(this->txt_action_perso->Text);
+
+	}
+	private: System::Void FormRequetePerso_Load(System::Object^ sender, System::EventArgs^ e) {
+	   }
 	};
 }
