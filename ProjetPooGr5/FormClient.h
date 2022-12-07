@@ -138,13 +138,14 @@ namespace ProjetPooGr5 {
 			// 
 			// button1
 			// 
+			this->button1->BackColor = System::Drawing::Color::Pink;
 			this->button1->Location = System::Drawing::Point(1083, 550);
 			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"retour";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &FormClient::button1_Click);
 			// 
 			// dataGridView1
@@ -159,24 +160,26 @@ namespace ProjetPooGr5 {
 			// 
 			// button2
 			// 
+			this->button2->BackColor = System::Drawing::Color::Pink;
 			this->button2->Location = System::Drawing::Point(997, 228);
 			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(144, 28);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"afficher client";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &FormClient::button2_Click);
 			// 
 			// button3
 			// 
+			this->button3->BackColor = System::Drawing::Color::Pink;
 			this->button3->Location = System::Drawing::Point(20, 228);
 			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(100, 28);
 			this->button3->TabIndex = 3;
 			this->button3->Text = L"Inserer client";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &FormClient::button3_Click);
 			// 
 			// txt_nom
@@ -305,13 +308,14 @@ namespace ProjetPooGr5 {
 			// 
 			// button4
 			// 
+			this->button4->BackColor = System::Drawing::Color::Pink;
 			this->button4->Location = System::Drawing::Point(385, 228);
 			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(168, 28);
 			this->button4->TabIndex = 17;
 			this->button4->Text = L"supprimer client";
-			this->button4->UseVisualStyleBackColor = true;
+			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &FormClient::button4_Click);
 			// 
 			// id_client
@@ -336,13 +340,14 @@ namespace ProjetPooGr5 {
 			// 
 			// button5
 			// 
+			this->button5->BackColor = System::Drawing::Color::Pink;
 			this->button5->Location = System::Drawing::Point(706, 228);
 			this->button5->Margin = System::Windows::Forms::Padding(4);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(168, 28);
 			this->button5->TabIndex = 20;
 			this->button5->Text = L"modifier client";
-			this->button5->UseVisualStyleBackColor = true;
+			this->button5->UseVisualStyleBackColor = false;
 			this->button5->Click += gcnew System::EventHandler(this, &FormClient::button5_Click);
 			// 
 			// label9
@@ -402,13 +407,14 @@ namespace ProjetPooGr5 {
 			// 
 			// button6
 			// 
+			this->button6->BackColor = System::Drawing::Color::Pink;
 			this->button6->Location = System::Drawing::Point(997, 280);
 			this->button6->Margin = System::Windows::Forms::Padding(4);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(144, 28);
 			this->button6->TabIndex = 27;
 			this->button6->Text = L"afficher table client";
-			this->button6->UseVisualStyleBackColor = true;
+			this->button6->UseVisualStyleBackColor = false;
 			this->button6->Click += gcnew System::EventHandler(this, &FormClient::button6_Click);
 			// 
 			// pictureBox1
