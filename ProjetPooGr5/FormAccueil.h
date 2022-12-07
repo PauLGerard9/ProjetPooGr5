@@ -5,7 +5,7 @@
 #include "FormStock.h"
 #include "FormStatistique.h"
 #include "FormRequetePerso.h"
-
+#include "MyF.h"
 namespace ProjetPooGr5 {
 
 	using namespace System;
@@ -54,6 +54,7 @@ namespace ProjetPooGr5 {
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button6;
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::Button^ button7;
 
 	private:
 		/// <summary>
@@ -81,6 +82,7 @@ namespace ProjetPooGr5 {
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button5
@@ -228,6 +230,16 @@ namespace ProjetPooGr5 {
 			this->label4->Text = L"Requete personnalisé";
 			this->label4->Click += gcnew System::EventHandler(this, &FormAccueil::label4_Click);
 			// 
+			// button7
+			// 
+			this->button7->Location = System::Drawing::Point(406, 457);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(75, 23);
+			this->button7->TabIndex = 25;
+			this->button7->Text = L"button7";
+			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &FormAccueil::button7_Click);
+			// 
 			// FormAccueil
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -235,6 +247,7 @@ namespace ProjetPooGr5 {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
 				static_cast<System::Int32>(static_cast<System::Byte>(128)));
 			this->ClientSize = System::Drawing::Size(1144, 531);
+			this->Controls->Add(this->button7);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
@@ -282,6 +295,10 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	MyF^ maForm1 = gcnew MyF();
+	maForm1->Show();
 }
 };
 }
