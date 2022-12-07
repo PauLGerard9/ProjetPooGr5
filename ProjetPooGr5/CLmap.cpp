@@ -31,7 +31,9 @@ System::String^ NS_Comp_Mappage::CLmap::SelectCommande(void)
 
 System::String^ NS_Comp_Mappage::CLmap::select_perso(void)
 {
-	return this->nom;
+	//return "SELECT * FROM Commande ;";
+
+	return this->id_client;
 }
 
 System::String^ NS_Comp_Mappage::CLmap::action_personnel(void)

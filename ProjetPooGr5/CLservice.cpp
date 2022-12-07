@@ -116,8 +116,11 @@ System::Data::DataSet^ NS_Comp_Svc::CLservice::selection_perso(System::String^ d
 {
 	System::String^ sql;
 
-	this->oMapp->setNom(requete);
+	this->oMapp->setid_client(requete);
+
 	sql = this->oMapp->select_perso();
+
+	this->oCad->actionRows(sql);
 	return this->oCad->getRows(sql, dataTableName);
 }
 void NS_Comp_Svc::CLservice::action_perso(System::String^ action)

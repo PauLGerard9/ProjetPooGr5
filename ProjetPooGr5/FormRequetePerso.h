@@ -180,7 +180,7 @@ namespace ProjetPooGr5 {
 
 		this->dataGridView1->Refresh();
 		this->oSvc = gcnew NS_Comp_Svc::CLservice();
-		this->oSvc->selection_perso("Rsl", this->txt_requete_perso->Text);
+		this->oDs = this->oSvc->selection_perso("Rsl", this->txt_requete_perso->Text);
 		this->dataGridView1->DataSource = this->oDs;
 		this->dataGridView1->DataMember = "Rsl";
 	}

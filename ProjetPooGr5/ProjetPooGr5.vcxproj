@@ -133,7 +133,6 @@
     <ClCompile Include="CLcad.cpp" />
     <ClCompile Include="CLmap.cpp" />
     <ClCompile Include="CLservice.cpp" />
-    <ClCompile Include="MyF.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FormAccueil.h">
@@ -163,9 +162,6 @@
     <ClInclude Include="CLservice.h" />
     <ClInclude Include="CLmap.h" />
     <ClInclude Include="CLcad.h" />
-    <ClInclude Include="MyF.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="tools.h" />
   </ItemGroup>
   <ItemGroup>
@@ -192,9 +188,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormStock.resx">
       <DependentUpon>FormStock.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MyF.resx">
-      <DependentUpon>MyF.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
