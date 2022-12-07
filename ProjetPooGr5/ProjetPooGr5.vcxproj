@@ -135,11 +135,6 @@
     <ClCompile Include="CLservice.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CLArticle.h" />
-    <ClInclude Include="CLCommandes.h" />
-    <ClInclude Include="CLPaiements.h" />
-    <ClInclude Include="CLpersonnel.h" />
-    <ClInclude Include="CLClient.h" />
     <ClInclude Include="FormAccueil.h">
       <FileType>CppForm</FileType>
     </ClInclude>

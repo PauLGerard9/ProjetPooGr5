@@ -126,7 +126,7 @@ namespace ProjetPooGr5 {
 			// 
 			// btncancel
 			// 
-			this->btncancel->Location = System::Drawing::Point(807, 410);
+			this->btncancel->Location = System::Drawing::Point(797, 410);
 			this->btncancel->Name = L"btncancel";
 			this->btncancel->Size = System::Drawing::Size(125, 41);
 			this->btncancel->TabIndex = 6;
