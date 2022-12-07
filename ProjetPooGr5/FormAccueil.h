@@ -85,138 +85,156 @@ namespace ProjetPooGr5 {
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(917, 143);
+			this->button5->BackColor = System::Drawing::Color::PaleTurquoise;
+			this->button5->Location = System::Drawing::Point(875, 347);
 			this->button5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(93, 23);
+			this->button5->Size = System::Drawing::Size(102, 37);
 			this->button5->TabIndex = 22;
 			this->button5->Text = L"statistiques";
-			this->button5->UseVisualStyleBackColor = true;
+			this->button5->UseVisualStyleBackColor = false;
 			this->button5->Click += gcnew System::EventHandler(this, &FormAccueil::button5_Click);
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(692, 143);
+			this->button4->BackColor = System::Drawing::Color::PaleTurquoise;
+			this->button4->Location = System::Drawing::Point(884, 141);
 			this->button4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(96, 23);
+			this->button4->Size = System::Drawing::Size(110, 36);
 			this->button4->TabIndex = 21;
 			this->button4->Text = L"commandes";
-			this->button4->UseVisualStyleBackColor = true;
+			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &FormAccueil::button4_Click);
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(881, 98);
+			this->label9->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic))));
+			this->label9->Location = System::Drawing::Point(800, 283);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(159, 17);
+			this->label9->Size = System::Drawing::Size(276, 26);
 			this->label9->TabIndex = 20;
 			this->label9->Text = L"Gestion des statistiques";
+			this->label9->Click += gcnew System::EventHandler(this, &FormAccueil::label9_Click);
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(456, 98);
+			this->label8->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic))));
+			this->label8->Location = System::Drawing::Point(420, 98);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(128, 17);
+			this->label8->Size = System::Drawing::Size(217, 26);
 			this->label8->TabIndex = 19;
 			this->label8->Text = L"Gestion des stocks";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(659, 98);
+			this->label7->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic))));
+			this->label7->Location = System::Drawing::Point(800, 98);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(164, 17);
+			this->label7->Size = System::Drawing::Size(277, 26);
 			this->label7->TabIndex = 18;
 			this->label7->Text = L"Gestion des commandes";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->label3->Location = System::Drawing::Point(13, 98);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(144, 17);
+			this->label3->Size = System::Drawing::Size(247, 26);
 			this->label3->TabIndex = 17;
 			this->label3->Text = L"Gestion du personnel";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(235, 98);
+			this->label1->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic))));
+			this->label1->Location = System::Drawing::Point(13, 283);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(128, 17);
+			this->label1->Size = System::Drawing::Size(221, 26);
 			this->label1->TabIndex = 16;
 			this->label1->Text = L"Gestion des clients";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15));
-			this->label2->Location = System::Drawing::Point(12, 28);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 22.2F, System::Drawing::FontStyle::Underline, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(291, 20);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(324, 29);
+			this->label2->Size = System::Drawing::Size(536, 46);
 			this->label2->TabIndex = 15;
 			this->label2->Text = L"Accueil de notre application";
 			// 
 			// button3
 			// 
+			this->button3->BackColor = System::Drawing::Color::PaleTurquoise;
 			this->button3->Location = System::Drawing::Point(45, 143);
 			this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(81, 23);
+			this->button3->Size = System::Drawing::Size(81, 34);
 			this->button3->TabIndex = 14;
 			this->button3->Text = L"personnel";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &FormAccueil::button3_Click);
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(476, 143);
+			this->button2->BackColor = System::Drawing::Color::PaleTurquoise;
+			this->button2->Location = System::Drawing::Point(483, 143);
 			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->Size = System::Drawing::Size(79, 34);
 			this->button2->TabIndex = 13;
 			this->button2->Text = L"stocks";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &FormAccueil::button2_Click);
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(260, 143);
+			this->button1->BackColor = System::Drawing::Color::PaleTurquoise;
+			this->button1->Location = System::Drawing::Point(51, 347);
 			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(86, 37);
 			this->button1->TabIndex = 12;
 			this->button1->Text = L"clients";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &FormAccueil::button1_Click);
 			// 
 			// button6
 			// 
-			this->button6->Location = System::Drawing::Point(126, 320);
+			this->button6->BackColor = System::Drawing::Color::PaleTurquoise;
+			this->button6->Location = System::Drawing::Point(440, 347);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(172, 23);
+			this->button6->Size = System::Drawing::Size(182, 37);
 			this->button6->TabIndex = 23;
 			this->button6->Text = L"requete personnalisé";
-			this->button6->UseVisualStyleBackColor = true;
+			this->button6->UseVisualStyleBackColor = false;
 			this->button6->Click += gcnew System::EventHandler(this, &FormAccueil::button6_Click);
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(134, 286);
+			this->label4->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 12, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic))));
+			this->label4->Location = System::Drawing::Point(401, 283);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(147, 17);
+			this->label4->Size = System::Drawing::Size(249, 26);
 			this->label4->TabIndex = 24;
 			this->label4->Text = L"Requete personnalisé";
+			this->label4->Click += gcnew System::EventHandler(this, &FormAccueil::label4_Click);
 			// 
 			// FormAccueil
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1099, 493);
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(128)));
+			this->ClientSize = System::Drawing::Size(1144, 531);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->button6);
 			this->Controls->Add(this->button5);
@@ -260,6 +278,10 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	FormRequetePerso^ maForm1 = gcnew FormRequetePerso();
 	maForm1->Show();
+}
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
