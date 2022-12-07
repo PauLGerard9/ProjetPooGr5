@@ -48,6 +48,9 @@
     <ClCompile Include="FormRequetePerso.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="MyF.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FormPersonnel.h">
@@ -84,6 +87,9 @@
       <Filter>Fichiers sources</Filter>
     </ClInclude>
     <ClInclude Include="FormRequetePerso.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="MyF.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>
