@@ -3,6 +3,7 @@
 
 
 
+
 namespace ProjetPooGr5 {
 
 	using namespace System;
@@ -139,7 +140,7 @@ namespace ProjetPooGr5 {
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::Pink;
-			this->button1->Location = System::Drawing::Point(1083, 550);
+			this->button1->Location = System::Drawing::Point(1066, 551);
 			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);

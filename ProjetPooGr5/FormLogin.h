@@ -189,6 +189,7 @@ private: System::Void btnok_Click(System::Object^ sender, System::EventArgs^ e) 
 	if (email == "1" && password == "1")
 	{
 		FormAccueil^ maForm1 = gcnew FormAccueil();
+		this->Hide();
 		maForm1->Show();
 	}
 	else

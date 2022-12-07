@@ -90,7 +90,7 @@ namespace ProjetPooGr5 {
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Location = System::Drawing::Point(8, 15);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->Size = System::Drawing::Size(1259, 185);
@@ -100,7 +100,7 @@ namespace ProjetPooGr5 {
 			// 
 			this->button2->BackColor = System::Drawing::Color::Pink;
 			this->button2->Location = System::Drawing::Point(573, 244);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(176, 28);
 			this->button2->TabIndex = 2;
@@ -111,7 +111,7 @@ namespace ProjetPooGr5 {
 			// txt_requete_perso
 			// 
 			this->txt_requete_perso->Location = System::Drawing::Point(281, 279);
-			this->txt_requete_perso->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->txt_requete_perso->Margin = System::Windows::Forms::Padding(4);
 			this->txt_requete_perso->Name = L"txt_requete_perso";
 			this->txt_requete_perso->Size = System::Drawing::Size(788, 22);
 			this->txt_requete_perso->TabIndex = 3;
@@ -120,7 +120,7 @@ namespace ProjetPooGr5 {
 			// 
 			this->button3->BackColor = System::Drawing::Color::Pink;
 			this->button3->Location = System::Drawing::Point(573, 382);
-			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(176, 28);
 			this->button3->TabIndex = 4;
@@ -131,7 +131,7 @@ namespace ProjetPooGr5 {
 			// txt_action_perso
 			// 
 			this->txt_action_perso->Location = System::Drawing::Point(281, 417);
-			this->txt_action_perso->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->txt_action_perso->Margin = System::Windows::Forms::Padding(4);
 			this->txt_action_perso->Name = L"txt_action_perso";
 			this->txt_action_perso->Size = System::Drawing::Size(788, 22);
 			this->txt_action_perso->TabIndex = 5;
@@ -139,7 +139,7 @@ namespace ProjetPooGr5 {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(12, 426);
+			this->pictureBox1->Location = System::Drawing::Point(8, 401);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(247, 186);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
